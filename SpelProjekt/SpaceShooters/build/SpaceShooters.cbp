@@ -88,6 +88,12 @@
 		<Unit filename="/Users/ismailsafwat/CLionProjects/SpaceShooters/Game.h">
 			<Option target="SpaceShooters"/>
 		</Unit>
+		<Unit filename="/Users/ismailsafwat/CLionProjects/SpaceShooters/Player.cpp">
+			<Option target="SpaceShooters"/>
+		</Unit>
+		<Unit filename="/Users/ismailsafwat/CLionProjects/SpaceShooters/Player.h">
+			<Option target="SpaceShooters"/>
+		</Unit>
 		<Unit filename="/Users/ismailsafwat/CLionProjects/SpaceShooters/main.cpp">
 			<Option target="SpaceShooters"/>
 		</Unit>

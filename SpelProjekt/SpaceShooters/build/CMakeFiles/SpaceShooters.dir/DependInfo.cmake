@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/ismailsafwat/CLionProjects/SpaceShooters/Game.cpp" "CMakeFiles/SpaceShooters.dir/Game.cpp.o" "gcc" "CMakeFiles/SpaceShooters.dir/Game.cpp.o.d"
+  "/Users/ismailsafwat/CLionProjects/SpaceShooters/Player.cpp" "CMakeFiles/SpaceShooters.dir/Player.cpp.o" "gcc" "CMakeFiles/SpaceShooters.dir/Player.cpp.o.d"
   "/Users/ismailsafwat/CLionProjects/SpaceShooters/main.cpp" "CMakeFiles/SpaceShooters.dir/main.cpp.o" "gcc" "CMakeFiles/SpaceShooters.dir/main.cpp.o.d"
   )
 

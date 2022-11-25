@@ -415,6 +415,7 @@ CMakeFiles/SpaceShooters.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Users/ismailsafwat/CLionProjects/SpaceShooters/Game.h \
+  /Users/ismailsafwat/CLionProjects/SpaceShooters/Player.h \
   /usr/local/include/SFML/Graphics.hpp \
   /usr/local/include/SFML/Window.hpp /usr/local/include/SFML/System.hpp \
   /usr/local/include/SFML/Config.hpp \

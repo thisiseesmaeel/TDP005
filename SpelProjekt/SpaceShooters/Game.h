@@ -5,13 +5,12 @@
 #ifndef SPACESHOOTERS_GAME_H
 #define SPACESHOOTERS_GAME_H
 
-#include<SFML/Graphics.hpp>
-#include<SFML/System.hpp>
+#include "Player.h"
 
 
 class Game {
 private:
-    sf::RenderWindow* window;
+    sf::RenderWindow* window{};
 
     /*
      * Private functions

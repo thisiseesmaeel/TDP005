@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SpaceShooters.dir/Game.cpp.o"
   "CMakeFiles/SpaceShooters.dir/Game.cpp.o.d"
+  "CMakeFiles/SpaceShooters.dir/Player.cpp.o"
+  "CMakeFiles/SpaceShooters.dir/Player.cpp.o.d"
   "CMakeFiles/SpaceShooters.dir/main.cpp.o"
   "CMakeFiles/SpaceShooters.dir/main.cpp.o.d"
   "SpaceShooters"

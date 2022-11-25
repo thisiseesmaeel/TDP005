@@ -1,6 +1,5 @@
-CMakeFiles/SpaceShooters.dir/Game.cpp.o: \
-  /Users/ismailsafwat/CLionProjects/SpaceShooters/Game.cpp \
-  /Users/ismailsafwat/CLionProjects/SpaceShooters/Game.h \
+CMakeFiles/SpaceShooters.dir/Player.cpp.o: \
+  /Users/ismailsafwat/CLionProjects/SpaceShooters/Player.cpp \
   /Users/ismailsafwat/CLionProjects/SpaceShooters/Player.h \
   /usr/local/include/SFML/Graphics.hpp \
   /usr/local/include/SFML/Window.hpp /usr/local/include/SFML/System.hpp \

@@ -81,12 +81,12 @@ clean: CMakeFiles/SpaceShooters.dir/clean
 CMakeFiles/SpaceShooters.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpaceShooters.dir/build.make CMakeFiles/SpaceShooters.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpaceShooters.dir/build.make CMakeFiles/SpaceShooters.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ismailsafwat/CLionProjects/SpaceShooters/build/CMakeFiles --progress-num=1,2,3 "Built target SpaceShooters"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ismailsafwat/CLionProjects/SpaceShooters/build/CMakeFiles --progress-num=1,2,3,4 "Built target SpaceShooters"
 .PHONY : CMakeFiles/SpaceShooters.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SpaceShooters.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ismailsafwat/CLionProjects/SpaceShooters/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ismailsafwat/CLionProjects/SpaceShooters/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SpaceShooters.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ismailsafwat/CLionProjects/SpaceShooters/build/CMakeFiles 0
 .PHONY : CMakeFiles/SpaceShooters.dir/rule
