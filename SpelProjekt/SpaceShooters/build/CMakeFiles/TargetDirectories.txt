@@ -1,3 +1,0 @@
-/Users/ismailsafwat/CLionProjects/SpaceShooters/build/CMakeFiles/SpaceShooters.dir
-/Users/ismailsafwat/CLionProjects/SpaceShooters/build/CMakeFiles/edit_cache.dir
-/Users/ismailsafwat/CLionProjects/SpaceShooters/build/CMakeFiles/rebuild_cache.dir

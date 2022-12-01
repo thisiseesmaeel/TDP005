@@ -1,5 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/Library/Developer/CommandLineTools/usr/bin/cc -DCMAKE_CXX_COMPILER=/Library/Developer/CommandLineTools/usr/bin/c++ -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_MAKE_PROGRAM=/usr/bin/make -DCMAKE_OSX_DEPLOYMENT_TARGET:STRING=13.0 -G "CodeBlocks - Unix Makefiles" -S /Users/ismailsafwat/CLionProjects/SpaceShooters -B /Users/ismailsafwat/CLionProjects/SpaceShooters/build
--- Found SFML 2.5.1 in /opt/homebrew/lib/cmake/SFML
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/ismailsafwat/CLionProjects/SpaceShooters/build
