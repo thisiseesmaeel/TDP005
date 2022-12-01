@@ -24,7 +24,8 @@ void Player::initializeTexture() {
     /*
      * A texture will be loaded from a file.
      */
-    if(!this->texture.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/Textures/shapeshooter.png")){
+    //TODO Här går det inte att visa bilden när man kompilerar.
+    if(!this->texture.loadFromFile("Textures/shapeshooter.png")){
         std::cout << "ERROR::PLAYER::INITIALIZETEXTURE::Failed to load the file!" << "\n";
     }
 }
