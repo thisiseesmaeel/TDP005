@@ -129,6 +129,30 @@ ShapeShooters/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeShooters.dir/build.make CMakeFiles/ShapeShooters.dir/build
 .PHONY : ShapeShooters/fast
 
+Bullet.o: Bullet.cpp.o
+.PHONY : Bullet.o
+
+# target to build an object file
+Bullet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeShooters.dir/build.make CMakeFiles/ShapeShooters.dir/Bullet.cpp.o
+.PHONY : Bullet.cpp.o
+
+Bullet.i: Bullet.cpp.i
+.PHONY : Bullet.i
+
+# target to preprocess a source file
+Bullet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeShooters.dir/build.make CMakeFiles/ShapeShooters.dir/Bullet.cpp.i
+.PHONY : Bullet.cpp.i
+
+Bullet.s: Bullet.cpp.s
+.PHONY : Bullet.s
+
+# target to generate assembly for a file
+Bullet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeShooters.dir/build.make CMakeFiles/ShapeShooters.dir/Bullet.cpp.s
+.PHONY : Bullet.cpp.s
+
 Game.o: Game.cpp.o
 .PHONY : Game.o
 
@@ -210,6 +234,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ShapeShooters"
+	@echo "... Bullet.o"
+	@echo "... Bullet.i"
+	@echo "... Bullet.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"

@@ -2,8 +2,8 @@
 // Created by Ismail Safwat on 2022-11-25.
 //
 
-#ifndef SHAPESHOOTERS_PLAYER_H
-#define SHAPESHOOTERS_PLAYER_H
+#ifndef PLAYER_H
+#define PLAYER_H
 
 #include<SFML/Graphics.hpp>
 #include<SFML/System.hpp>
@@ -16,18 +16,23 @@ private:
 
     float movementVelocity;
     /*
-     * Private functions
+     * Player Private functions
      */
     void initializeTexture();
     void initializeSprite();
 public:
+    /*
+     * Player constructor
+     */
     Player();
-
+    /*'
+     * Player destructor
+     */
     virtual ~Player();
 
 
     /*
-     * Functions
+     * Player public functions
      */
     void move(const float coordinateX, const float coordinateY);
     void update();
@@ -36,4 +41,4 @@ public:
 };
 
 
-#endif //SHAPESHOOTERS_PLAYER_H
+#endif // !PLAYER_H

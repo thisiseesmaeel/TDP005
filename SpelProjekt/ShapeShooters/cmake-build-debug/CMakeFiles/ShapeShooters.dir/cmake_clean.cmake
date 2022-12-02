@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ShapeShooters.dir/Bullet.cpp.o"
+  "CMakeFiles/ShapeShooters.dir/Bullet.cpp.o.d"
   "CMakeFiles/ShapeShooters.dir/Game.cpp.o"
   "CMakeFiles/ShapeShooters.dir/Game.cpp.o.d"
   "CMakeFiles/ShapeShooters.dir/Player.cpp.o"

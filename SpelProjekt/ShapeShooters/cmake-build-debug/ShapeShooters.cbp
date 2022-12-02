@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/ismailsafwat/CLionProjects/ShapeShooters/Bullet.cpp">
+			<Option target="ShapeShooters"/>
+		</Unit>
+		<Unit filename="/Users/ismailsafwat/CLionProjects/ShapeShooters/Bullet.h">
+			<Option target="ShapeShooters"/>
+		</Unit>
 		<Unit filename="/Users/ismailsafwat/CLionProjects/ShapeShooters/Game.cpp">
 			<Option target="ShapeShooters"/>
 		</Unit>

@@ -5,7 +5,7 @@
 #include "Player.h"
 
 /*
- * Private functions
+ * Player Private functions
  */
 
 void Player::initializeTexture() {
@@ -13,7 +13,7 @@ void Player::initializeTexture() {
      * A texture will be loaded from a file.
      */
     //TODO Här går det inte att visa bilden när man kompilerar.
-    if(!this->texture.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/sfmliconbig.png")){
+    if(!this->texture.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/shapeshooter.png")){
         std::cout << "ERROR::PLAYER::INITIALIZETEXTURE::Failed to load the file!" << "\n";
     }
 }
@@ -27,7 +27,7 @@ void Player::initializeSprite() {
     /*
      * Resize the sprite here.
      */
-    this->sprite.scale(1.2f, 1.2f);
+    this->sprite.scale(0.2f, 0.2f);
 }
 
 
@@ -41,7 +41,7 @@ Player::Player() {
 Player::~Player() = default;
 
 /*
- * Functions
+ * Player public functions
  */
 void Player::update() {
 

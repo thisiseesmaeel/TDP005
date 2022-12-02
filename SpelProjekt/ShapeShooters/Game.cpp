@@ -32,6 +32,10 @@ void Game::initializeWindow() {
     this->window->setVerticalSyncEnabled(false);
 }
 
+void Game::initializeTextures() {
+    //this->textures.
+}
+
 void Game::initializePlayer() {
     this->player = new Player();
 }
@@ -51,8 +55,8 @@ void Game::run() {
 
 }
 
+void Game::updatePollEvents() {
 
-void Game::update() {
     sf::Event e{};
     while(this->window->pollEvent(e)) {
         /*
@@ -66,10 +70,12 @@ void Game::update() {
         if(e.Event::key.code == sf::Keyboard::Escape)
             this->window->close();
     }
+}
 
+void Game::updateInput() {
     /*
-     * Move Player
-     */
+ * Move Player
+ */
     //MOVE TO THE LEFT
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
         this->player->move(-1.f, 0.f);
@@ -82,7 +88,13 @@ void Game::update() {
     //MOVE BACKWARD
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
         this->player->move(0.f, 1.f);
+}
 
+
+void Game::update() {
+
+    this->updatePollEvents();
+    this->updateInput();
 }
 
 void Game::render() {
@@ -95,6 +107,10 @@ void Game::render() {
     this->player->render(*this->window);
     this->window->display();
 }
+
+
+
+
 
 
 
