@@ -2,8 +2,8 @@
 // Created by Ismail Safwat on 2022-11-25.
 //
 
-#ifndef SPACESHOOTERS_PLAYER_H
-#define SPACESHOOTERS_PLAYER_H
+#ifndef SHAPESHOOTERS_PLAYER_H
+#define SHAPESHOOTERS_PLAYER_H
 
 #include<SFML/Graphics.hpp>
 #include<SFML/System.hpp>
@@ -18,8 +18,8 @@ private:
     /*
      * Private functions
      */
-    void initializeSprite();
     void initializeTexture();
+    void initializeSprite();
 public:
     Player();
 
@@ -36,4 +36,4 @@ public:
 };
 
 
-#endif //SPACESHOOTERS_PLAYER_H
+#endif //SHAPESHOOTERS_PLAYER_H

@@ -60,14 +60,14 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/ismailsafwat/CLionProjects/ShapeShooters
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ismailsafwat/CLionProjects/ShapeShooters/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ismailsafwat/CLionProjects/ShapeShooters
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	@echo "Running external command ..."
 	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	@echo "Running external command ..."
 	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ismailsafwat/CLionProjects/ShapeShooters/cmake-build-debug/CMakeFiles /Users/ismailsafwat/CLionProjects/ShapeShooters/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ismailsafwat/CLionProjects/ShapeShooters/CMakeFiles /Users/ismailsafwat/CLionProjects/ShapeShooters//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ismailsafwat/CLionProjects/ShapeShooters/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ismailsafwat/CLionProjects/ShapeShooters/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ShapeShooters
+# Target rules for targets named main.cpp
 
 # Build rule for target.
-ShapeShooters: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ShapeShooters
-.PHONY : ShapeShooters
+main.cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main.cpp
+.PHONY : main.cpp
 
 # fast build rule for target.
-ShapeShooters/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeShooters.dir/build.make CMakeFiles/ShapeShooters.dir/build
-.PHONY : ShapeShooters/fast
+main.cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/build
+.PHONY : main.cpp/fast
 
 Game.o: Game.cpp.o
 .PHONY : Game.o
 
 # target to build an object file
 Game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeShooters.dir/build.make CMakeFiles/ShapeShooters.dir/Game.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Game.cpp.o
 .PHONY : Game.cpp.o
 
 Game.i: Game.cpp.i
@@ -142,7 +142,7 @@ Game.i: Game.cpp.i
 
 # target to preprocess a source file
 Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeShooters.dir/build.make CMakeFiles/ShapeShooters.dir/Game.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Game.cpp.i
 .PHONY : Game.cpp.i
 
 Game.s: Game.cpp.s
@@ -150,7 +150,7 @@ Game.s: Game.cpp.s
 
 # target to generate assembly for a file
 Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeShooters.dir/build.make CMakeFiles/ShapeShooters.dir/Game.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
 Player.o: Player.cpp.o
@@ -158,7 +158,7 @@ Player.o: Player.cpp.o
 
 # target to build an object file
 Player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeShooters.dir/build.make CMakeFiles/ShapeShooters.dir/Player.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Player.cpp.o
 .PHONY : Player.cpp.o
 
 Player.i: Player.cpp.i
@@ -166,7 +166,7 @@ Player.i: Player.cpp.i
 
 # target to preprocess a source file
 Player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeShooters.dir/build.make CMakeFiles/ShapeShooters.dir/Player.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Player.cpp.i
 .PHONY : Player.cpp.i
 
 Player.s: Player.cpp.s
@@ -174,32 +174,8 @@ Player.s: Player.cpp.s
 
 # target to generate assembly for a file
 Player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeShooters.dir/build.make CMakeFiles/ShapeShooters.dir/Player.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Player.cpp.s
 .PHONY : Player.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeShooters.dir/build.make CMakeFiles/ShapeShooters.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeShooters.dir/build.make CMakeFiles/ShapeShooters.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ShapeShooters.dir/build.make CMakeFiles/ShapeShooters.dir/main.cpp.s
-.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -209,16 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ShapeShooters"
+	@echo "... main.cpp"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

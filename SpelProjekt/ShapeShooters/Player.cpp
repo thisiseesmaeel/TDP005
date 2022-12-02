@@ -8,6 +8,16 @@
  * Private functions
  */
 
+void Player::initializeTexture() {
+    /*
+     * A texture will be loaded from a file.
+     */
+    //TODO Här går det inte att visa bilden när man kompilerar.
+    if(!this->texture.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/sfmliconbig.png")){
+        std::cout << "ERROR::PLAYER::INITIALIZETEXTURE::Failed to load the file!" << "\n";
+    }
+}
+
 void Player::initializeSprite() {
     /*
      * The texture will be set to the sprite.
@@ -20,19 +30,11 @@ void Player::initializeSprite() {
     this->sprite.scale(1.2f, 1.2f);
 }
 
-void Player::initializeTexture() {
-    /*
-     * A texture will be loaded from a file.
-     */
-    //TODO Här går det inte att visa bilden när man kompilerar.
-    if(!this->texture.loadFromFile("Textures/shapeshooter.png")){
-        std::cout << "ERROR::PLAYER::INITIALIZETEXTURE::Failed to load the file!" << "\n";
-    }
-}
+
 
 Player::Player() {
-    this->initializeSprite();
     this->initializeTexture();
+    this->initializeSprite();
     this->movementVelocity = 1.f;
 }
 
@@ -52,5 +54,3 @@ void Player::render(sf::RenderTarget& target) {
 void Player::move(const float coordinateX, const float coordinateY) {
     this->sprite.move(this->movementVelocity * coordinateX, this->movementVelocity * coordinateY);
 }
-
-
