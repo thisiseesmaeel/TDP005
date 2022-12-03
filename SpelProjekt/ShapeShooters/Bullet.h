@@ -13,7 +13,7 @@ private:
     sf::Sprite shape;
 
     sf::Vector2f direction;
-    float movementVelocity;
+    float movementVelocity{};
 
     /*
      * Bullet private functions
@@ -27,11 +27,16 @@ public:
     /*
      * Bullet constructor
      */
-    Bullet(sf::Texture& texture, float coordinateX, float coordinateY, float movementVelocity);
+    Bullet(sf::Texture* texture, float positionX, float positionY, float coordinateX, float coordinateY, float movementVelocity);
     /*
      * Bullet destructor
      */
     virtual ~Bullet();
+
+    /*
+     * Bullet accessors
+     */
+    sf::FloatRect getBounds() const;
     /*
      * Bullet public functions
      */

@@ -8,17 +8,19 @@ Bullet::Bullet() {
 
 }
 
-Bullet::Bullet(sf::Texture& texture, float coordinateX, float coordinateY, float movementVelocity) {
-    this->shape.setTexture(texture);
+Bullet::Bullet(sf::Texture* texture, float positionX, float positionY, float coordinateX, float coordinateY, float movementVelocity) {
+    this->shape.setTexture(*texture);
+    this->shape.setPosition(positionX, positionY);
     this->direction.x = coordinateX;
     this->direction.y = coordinateY;
     this->movementVelocity = movementVelocity;
 }
 
-Bullet::~Bullet() {
+Bullet::~Bullet() = default;
 
+sf::FloatRect Bullet::getBounds() const {
+    return this->shape.getGlobalBounds();
 }
-
 
 /*
  * Bullet public functions
@@ -34,5 +36,7 @@ void Bullet::update() {
 void Bullet::render(sf::RenderTarget* target) {
     target->draw(this->shape);
 }
+
+
 
 

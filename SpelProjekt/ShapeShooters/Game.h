@@ -6,6 +6,7 @@
 #define GAME_H
 
 #include "Player.h"
+#include "Bullet.h"
 #include<map>
 
 
@@ -19,13 +20,15 @@ private:
     /*
      * Resources
      */
-    //For each string there will be textures
-    std::map<std::string, sf::Texture> textures;
+    //For each string there will be textures.
+    //I made Texture as pointer because I want to make sure map contains the actual textures.
+    std::map<std::string, sf::Texture*> textures;
+    std::vector<Bullet*> bullets;
 
     /*
      * Player
      */
-    Player* player;
+    Player* player{};
 
     /*
      * Game Private functions
@@ -44,12 +47,15 @@ public:
      */
     virtual ~Game();
 
+
+
     /*
      * Game public functions
      */
     void run();
     void updatePollEvents();
     void updateInput();
+    void updateBullets();
     void update();
     void render();
 

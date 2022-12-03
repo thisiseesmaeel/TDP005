@@ -30,6 +30,10 @@ public:
      */
     virtual ~Player();
 
+    /*
+     * Player accessor
+     */
+    const sf::Vector2f& getPos() const;
 
     /*
      * Player public functions

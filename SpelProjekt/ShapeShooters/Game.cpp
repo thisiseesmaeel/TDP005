@@ -8,6 +8,7 @@
  */
 Game::Game() {
     this->initializeWindow();
+    this->initializeTextures();
     this->initializePlayer();
 }
 /*
@@ -16,6 +17,19 @@ Game::Game() {
 Game::~Game() {
     delete this->window;
     delete this->player;
+
+    /*
+     * To avoid memory leaks after the game ends
+     */
+    // Delete textures
+    for(auto &t : this->textures){
+        delete t.second;
+    }
+
+    // Delete bullets
+    for(auto *b : this->bullets){
+        delete b;
+    }
 }
 
 /*
@@ -33,7 +47,8 @@ void Game::initializeWindow() {
 }
 
 void Game::initializeTextures() {
-    //this->textures.
+    this->textures["BULLET"] = new sf::Texture();
+    this->textures["BULLET"]->loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/bullet.png");
 }
 
 void Game::initializePlayer() {
@@ -88,6 +103,18 @@ void Game::updateInput() {
     //MOVE BACKWARD
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
         this->player->move(0.f, 1.f);
+
+
+    if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+        this->bullets.push_back(new Bullet(this->textures["BULLET"], this->player->getPos().x, this->player->getPos().y, 0.f, 0.f, 0.f));
+    }
+
+}
+
+void Game::updateBullets() {
+    for(auto *bullet : bullets){
+        bullet->render(this->window);
+    }
 }
 
 
@@ -95,6 +122,7 @@ void Game::update() {
 
     this->updatePollEvents();
     this->updateInput();
+    this->updateBullets();
 }
 
 void Game::render() {
@@ -105,6 +133,11 @@ void Game::render() {
      */
     //Render the player inside the window
     this->player->render(*this->window);
+
+    for(auto *bullet : bullets){
+        bullet->render(this->window);
+    }
+
     this->window->display();
 }
 

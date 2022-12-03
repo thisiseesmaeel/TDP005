@@ -40,6 +40,10 @@ Player::Player() {
 
 Player::~Player() = default;
 
+const sf::Vector2f &Player::getPos() const {
+    return this->sprite.getPosition();
+}
+
 /*
  * Player public functions
  */
@@ -54,3 +58,5 @@ void Player::render(sf::RenderTarget& target) {
 void Player::move(const float coordinateX, const float coordinateY) {
     this->sprite.move(this->movementVelocity * coordinateX, this->movementVelocity * coordinateY);
 }
+
+
