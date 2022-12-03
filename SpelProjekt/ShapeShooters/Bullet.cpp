@@ -14,6 +14,7 @@ Bullet::Bullet(sf::Texture* texture, float positionX, float positionY, float coo
     this->direction.x = coordinateX;
     this->direction.y = coordinateY;
     this->movementVelocity = movementVelocity;
+    this->shape.scale(0.08f, 0.08f);
 }
 
 Bullet::~Bullet() = default;

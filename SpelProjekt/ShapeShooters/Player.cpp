@@ -8,6 +8,12 @@
  * Player Private functions
  */
 
+void Player::initializeVariables() {
+    this->movementVelocity = 2.f;
+    this->attackControlMax = 10.f;
+    this->attackControl = this->attackControlMax;
+}
+
 void Player::initializeTexture() {
     /*
      * A texture will be loaded from a file.
@@ -33,9 +39,10 @@ void Player::initializeSprite() {
 
 
 Player::Player() {
+    this->initializeVariables();
     this->initializeTexture();
     this->initializeSprite();
-    this->movementVelocity = 1.f;
+
 }
 
 Player::~Player() = default;
@@ -47,16 +54,37 @@ const sf::Vector2f &Player::getPos() const {
 /*
  * Player public functions
  */
-void Player::update() {
+void Player::move(const float coordinateX, const float coordinateY) {
+    this->sprite.move(this->movementVelocity * coordinateX, this->movementVelocity * coordinateY);
+}
 
+bool Player::canAttack() {
+    if(this->attackControl >= this->attackControlMax){
+        this->attackControl += 1.f;
+        return true;
+    }
+    return false;
+}
+
+
+void Player::updateAttack() {
+    if(this->attackControl < this->attackControlMax){
+        this->attackControl += 0.5f;
+    }
+
+}
+void Player::update() {
+    this->updateAttack();
 }
 
 void Player::render(sf::RenderTarget& target) {
     target.draw(this->sprite);
 }
 
-void Player::move(const float coordinateX, const float coordinateY) {
-    this->sprite.move(this->movementVelocity * coordinateX, this->movementVelocity * coordinateY);
-}
+
+
+
+
+
 
 

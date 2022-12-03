@@ -999,6 +999,7 @@ CMakeFiles/ShapeShooters.dir/Game.cpp.o: /Users/ismailsafwat/CLionProjects/Shape
   /usr/local/include/SFML/Graphics/VertexBuffer.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/istream \
+  /opt/homebrew/include/jmorecfg.h \
   /Users/ismailsafwat/CLionProjects/ShapeShooters/Bullet.h
 
 CMakeFiles/ShapeShooters.dir/Player.cpp.o: /Users/ismailsafwat/CLionProjects/ShapeShooters/Player.cpp \
@@ -1498,7 +1499,8 @@ CMakeFiles/ShapeShooters.dir/Player.cpp.o: /Users/ismailsafwat/CLionProjects/Sha
   /usr/local/include/SFML/Graphics/Text.hpp \
   /usr/local/include/SFML/Graphics/VertexBuffer.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iostream \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/istream
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/istream \
+  /opt/homebrew/include/jmorecfg.h
 
 CMakeFiles/ShapeShooters.dir/main.cpp.o: /Users/ismailsafwat/CLionProjects/ShapeShooters/main.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iostream \
@@ -1999,6 +2001,7 @@ CMakeFiles/ShapeShooters.dir/main.cpp.o: /Users/ismailsafwat/CLionProjects/Shape
   /usr/local/include/SFML/Graphics/Sprite.hpp \
   /usr/local/include/SFML/Graphics/Text.hpp \
   /usr/local/include/SFML/Graphics/VertexBuffer.hpp \
+  /opt/homebrew/include/jmorecfg.h \
   /Users/ismailsafwat/CLionProjects/ShapeShooters/Bullet.h
 
 
@@ -2467,6 +2470,8 @@ CMakeFiles/ShapeShooters.dir/main.cpp.o: /Users/ismailsafwat/CLionProjects/Shape
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/equal.h:
+
+/opt/homebrew/include/jmorecfg.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_zero.h:
 

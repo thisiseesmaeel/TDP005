@@ -89,8 +89,8 @@ void Game::updatePollEvents() {
 
 void Game::updateInput() {
     /*
- * Move Player
- */
+     * Move Player
+     */
     //MOVE TO THE LEFT
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
         this->player->move(-1.f, 0.f);
@@ -104,16 +104,33 @@ void Game::updateInput() {
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
         this->player->move(0.f, 1.f);
 
-
-    if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-        this->bullets.push_back(new Bullet(this->textures["BULLET"], this->player->getPos().x, this->player->getPos().y, 0.f, 0.f, 0.f));
+    /*
+     * When left button of mouse is pressed and player can attack
+     */
+    if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && this->player->canAttack()){
+        this->bullets.push_back(new Bullet(this->textures["BULLET"], this->player->getPos().x, this->player->getPos().y, 0.f, -1.f, 5.f));
     }
 
 }
 
 void Game::updateBullets() {
+    unsigned counter = 0;
     for(auto *bullet : bullets){
-        bullet->render(this->window);
+        bullet->update();
+        /*
+         * Managing bullets when going toward top of screen
+         */
+        if(bullet->getBounds().top + bullet->getBounds().height < 0.f){
+
+            // Delete bullet from memory and erase them as well.
+            delete this->bullets.at(counter);
+            this->bullets.erase(this->bullets.begin() + counter);
+            --counter;
+
+            std::cout << this->bullets.size() << std::endl;
+        }
+
+        ++counter;
     }
 }
 
@@ -122,6 +139,7 @@ void Game::update() {
 
     this->updatePollEvents();
     this->updateInput();
+    this->player->update();
     this->updateBullets();
 }
 

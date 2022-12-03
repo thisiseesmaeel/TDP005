@@ -497,4 +497,5 @@ CMakeFiles/ShapeShooters.dir/main.cpp.o: \
   /usr/local/include/SFML/Graphics/Sprite.hpp \
   /usr/local/include/SFML/Graphics/Text.hpp \
   /usr/local/include/SFML/Graphics/VertexBuffer.hpp \
+  /opt/homebrew/include/jmorecfg.h \
   /Users/ismailsafwat/CLionProjects/ShapeShooters/Bullet.h

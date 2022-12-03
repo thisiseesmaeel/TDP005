@@ -8,6 +8,7 @@
 #include<SFML/Graphics.hpp>
 #include<SFML/System.hpp>
 #include<iostream>
+#include <jmorecfg.h>
 
 class Player {
 private:
@@ -15,9 +16,13 @@ private:
     sf::Texture texture;
 
     float movementVelocity;
+
+    float attackControl;
+    float attackControlMax;
     /*
      * Player Private functions
      */
+    void initializeVariables();
     void initializeTexture();
     void initializeSprite();
 public:
@@ -39,6 +44,8 @@ public:
      * Player public functions
      */
     void move(const float coordinateX, const float coordinateY);
+    bool canAttack();
+    void updateAttack();
     void update();
     void render(sf::RenderTarget& target);
 
