@@ -14,7 +14,7 @@ void Enemy::initializeShape() {
 }
 
 void Enemy::initializeVariables() {
-    this->speed = 2.f;
+    this->speed = 3.f;
     this->type = 0;
     this->healthPoint = 0;
     this->healthPointMax = 10;
@@ -37,7 +37,7 @@ Enemy::~Enemy() {
 }
 
 
-const sf::FloatRect Enemy::getBounds() const {
+sf::FloatRect Enemy::getBounds() const {
     return this->shape.getGlobalBounds();
 }
 

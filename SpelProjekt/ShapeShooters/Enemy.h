@@ -37,7 +37,7 @@ public:
     /*
      * Enemy accessor
      */
-    const sf::FloatRect getBounds() const;
+    sf::FloatRect getBounds() const;
 
     /*
      * Enemy public functions

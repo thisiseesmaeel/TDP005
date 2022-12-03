@@ -27,6 +27,12 @@ private:
     std::vector<Bullet*> bullets;
 
     /*
+     * GUI
+     */
+    sf::Font font;
+    sf::Text pointText;
+
+    /*
      * Player
      */
     Player* player{};
@@ -35,15 +41,17 @@ private:
      * Enemy
      * Here defines many enemies instead of one.
      */
-    float spawnTimer;
-    float spawnTimerMax;
+    float spawnTimer{};
+    float spawnTimerMax{};
     std::vector<Enemy*> enemies;
+
 
     /*
      * Game Private functions
      */
     void initializeWindow();
     void initializeTextures();
+    void initializeGUI();
     void initializePlayer();
     void initializeEnemy();
 
@@ -65,9 +73,11 @@ public:
     void run();
     void updatePollEvents();
     void updateInput();
+    void updateGUI();
     void updateBullets();
-    void updateEnemies();
+    void updateEnemiesAndFight();
     void update();
+    void renderGUI();
     void render();
 
 };

@@ -4,9 +4,7 @@
 
 #include "Bullet.h"
 
-Bullet::Bullet() {
-
-}
+Bullet::Bullet() = default;
 
 Bullet::Bullet(sf::Texture* texture, float positionX, float positionY, float coordinateX, float coordinateY, float movementVelocity) {
     this->shape.setTexture(*texture);

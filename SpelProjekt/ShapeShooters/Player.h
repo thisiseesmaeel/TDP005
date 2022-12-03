@@ -14,10 +14,10 @@ private:
     sf::Sprite sprite;
     sf::Texture texture;
 
-    float movementVelocity;
+    float movementVelocity{};
 
-    float attackControl;
-    float attackControlMax;
+    float attackControl{};
+    float attackControlMax{};
     /*
      * Player Private functions
      */
@@ -38,12 +38,12 @@ public:
      * Player accessor
      */
     const sf::Vector2f& getPos() const;
-    const sf::FloatRect getBounds() const;
+    sf::FloatRect getBounds() const;
 
     /*
      * Player public functions
      */
-    void move(const float coordinateX, const float coordinateY);
+    void move(float coordinateX, float coordinateY);
     bool canAttack();
     void updateAttack();
     void update();
