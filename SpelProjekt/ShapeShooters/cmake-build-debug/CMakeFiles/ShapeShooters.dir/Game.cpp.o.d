@@ -497,5 +497,5 @@ CMakeFiles/ShapeShooters.dir/Game.cpp.o: \
   /usr/local/include/SFML/Graphics/VertexBuffer.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/istream \
-  /opt/homebrew/include/jmorecfg.h \
-  /Users/ismailsafwat/CLionProjects/ShapeShooters/Bullet.h
+  /Users/ismailsafwat/CLionProjects/ShapeShooters/Bullet.h \
+  /Users/ismailsafwat/CLionProjects/ShapeShooters/Enemy.h

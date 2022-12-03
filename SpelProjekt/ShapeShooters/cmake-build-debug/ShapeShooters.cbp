@@ -88,6 +88,12 @@
 		<Unit filename="/Users/ismailsafwat/CLionProjects/ShapeShooters/Bullet.h">
 			<Option target="ShapeShooters"/>
 		</Unit>
+		<Unit filename="/Users/ismailsafwat/CLionProjects/ShapeShooters/Enemy.cpp">
+			<Option target="ShapeShooters"/>
+		</Unit>
+		<Unit filename="/Users/ismailsafwat/CLionProjects/ShapeShooters/Enemy.h">
+			<Option target="ShapeShooters"/>
+		</Unit>
 		<Unit filename="/Users/ismailsafwat/CLionProjects/ShapeShooters/Game.cpp">
 			<Option target="ShapeShooters"/>
 		</Unit>

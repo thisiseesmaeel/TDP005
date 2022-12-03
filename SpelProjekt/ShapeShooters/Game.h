@@ -7,6 +7,7 @@
 
 #include "Player.h"
 #include "Bullet.h"
+#include "Enemy.h"
 #include<map>
 
 
@@ -29,6 +30,11 @@ private:
      * Player
      */
     Player* player{};
+
+    /*
+     * Enemy
+     */
+    Enemy* enemy{};
 
     /*
      * Game Private functions
@@ -62,4 +68,4 @@ public:
 };
 
 
-#endif // !GAME_H
+#endif //!GAME_H

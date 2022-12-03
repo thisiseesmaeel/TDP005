@@ -8,7 +8,6 @@
 #include<SFML/Graphics.hpp>
 #include<SFML/System.hpp>
 #include<iostream>
-#include <jmorecfg.h>
 
 class Player {
 private:
@@ -52,4 +51,4 @@ public:
 };
 
 
-#endif // !PLAYER_H
+#endif //!PLAYER_H
