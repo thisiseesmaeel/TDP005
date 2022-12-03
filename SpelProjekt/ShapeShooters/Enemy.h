@@ -12,6 +12,7 @@
 class Enemy {
 private:
     sf::CircleShape shape;
+    float speed;
     int type;
     int healthPoint;
     int healthPointMax;
@@ -32,6 +33,12 @@ public:
      * Enemy destructor
      */
     virtual ~Enemy();
+
+    /*
+     * Enemy accessor
+     */
+    const sf::FloatRect getBounds() const;
+
     /*
      * Enemy public functions
      */
