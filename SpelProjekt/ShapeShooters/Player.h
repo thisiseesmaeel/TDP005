@@ -38,6 +38,7 @@ public:
      * Player accessor
      */
     const sf::Vector2f& getPos() const;
+    const sf::FloatRect getBounds() const;
 
     /*
      * Player public functions

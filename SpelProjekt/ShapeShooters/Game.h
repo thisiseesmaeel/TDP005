@@ -33,8 +33,11 @@ private:
 
     /*
      * Enemy
+     * Here defines many enemies instead of one.
      */
-    Enemy* enemy{};
+    float spawnTimer;
+    float spawnTimerMax;
+    std::vector<Enemy*> enemies;
 
     /*
      * Game Private functions
@@ -42,6 +45,7 @@ private:
     void initializeWindow();
     void initializeTextures();
     void initializePlayer();
+    void initializeEnemy();
 
 public:
     /*
@@ -62,6 +66,7 @@ public:
     void updatePollEvents();
     void updateInput();
     void updateBullets();
+    void updateEnemies();
     void update();
     void render();
 

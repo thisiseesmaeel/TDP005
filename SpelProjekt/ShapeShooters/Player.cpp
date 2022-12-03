@@ -50,6 +50,9 @@ Player::~Player() = default;
 const sf::Vector2f &Player::getPos() const {
     return this->sprite.getPosition();
 }
+const sf::FloatRect Player::getBounds() const {
+    return this->sprite.getGlobalBounds();
+}
 
 /*
  * Player public functions
@@ -80,6 +83,8 @@ void Player::update() {
 void Player::render(sf::RenderTarget& target) {
     target.draw(this->sprite);
 }
+
+
 
 
 
