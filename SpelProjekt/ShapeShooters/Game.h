@@ -75,7 +75,8 @@ public:
     void updateInput();
     void updateGUI();
     void updateBullets();
-    void updateEnemiesAndFight();
+    void updateEnemies();
+    void updateWar();
     void update();
     void renderGUI();
     void render();

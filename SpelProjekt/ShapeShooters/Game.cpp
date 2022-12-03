@@ -66,7 +66,7 @@ void Game::initializeGUI() {
      * Fonts are loaded here
      */
     if(!this->font.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/Nasa21-l23X.ttf")){
-        std::cout << "ERROR::GAME::INITIALIZEGUI::font can not be loaded!" << std::endl;
+        std::cout << "Font can not be loaded!" << std::endl;
     }
     /*
      * Initializing Point texts here
@@ -158,7 +158,7 @@ void Game::updateBullets() {
     for(auto *bullet : bullets){
         bullet->update();
         /*
-         * Managing bullets when going toward top of screen
+         * Managing bullets when going toward top of the screen
          */
         if(bullet->getBounds().top + bullet->getBounds().height < 0.f){
 
@@ -175,42 +175,68 @@ void Game::updateBullets() {
 }
 
 
-void Game::updateEnemiesAndFight() {
+void Game::updateEnemies() {
+
+    /*
+     * Enemies spawn here
+     */
     this->spawnTimer += 0.5f;
     if(this->spawnTimer >= this->spawnTimerMax){
         this->enemies.push_back(new Enemy(rand() % this->window->getSize().x-20.f, -100.f));
         this->spawnTimer = 0.f;
     }
 
-    for(int e = 0; e < this->enemies.size(); ++e){
-        bool isEnemyRemoved = false;
-        this->enemies[e]->update();
-
-        for(size_t b = 0; b < this->bullets.size() && !isEnemyRemoved; b++){
-            if(this->bullets[b]->getBounds().intersects(this->enemies[e]->getBounds())){
-                this->bullets.erase(this->bullets.begin() + b);
-                this->enemies.erase(this->enemies.begin() + e);
-                isEnemyRemoved = true;
-
-            }
-        }
+    /*
+     * Updating enemies here
+     */
+    unsigned counter = 0;
+    for(auto *enemy : enemies){
+        enemy->update();
         /*
-         * Delete enemy when reaching the bottom of the screen
+         * Managing enemies when going toward bottom of the screen
          */
-        if(!isEnemyRemoved){
+        if(enemy->getBounds().top > this->window->getSize().y){
 
-            if(this->enemies[e]->getBounds().top > this->window->getSize().y){
-                this->enemies.erase(this->enemies.begin() + e);
-                std::cout << this->enemies.size() << std::endl;
-                isEnemyRemoved = true;
-            }
+            // Delete enemy from memory and erase them as well.
+            delete this->enemies.at(counter);
+            this->enemies.erase(this->enemies.begin() + counter);
+            --counter;
 
+            std::cout << this->enemies.size() << std::endl;
         }
 
+        ++counter;
     }
 
-
 }
+
+void Game::updateWar() {
+
+    for(int e = 0; e < this->enemies.size(); ++e){
+        bool isEnemyDeleted = false;
+        for (int b = 0; b < bullets.size() && isEnemyDeleted == false; b++) {
+            /*
+             * Check the collision between enemy and bullet
+             */
+            if(this->enemies[e]->getBounds().intersects(this->bullets[b]->getBounds())){
+
+                /*
+                 * Delete and erase enemy after collision
+                 */
+                delete this->enemies[e];
+                this->enemies.erase(this->enemies.begin() + e);
+
+                /*
+                 * Delete and erase bullet after collision
+                 */
+                delete this->bullets[b];
+                this->bullets.erase(this->bullets.begin() + b);
+                isEnemyDeleted == true;
+            }
+        }
+    }
+}
+
 
 void Game::update() {
 
@@ -218,7 +244,8 @@ void Game::update() {
     this->updateInput();
     this->player->update();
     this->updateBullets();
-    this->updateEnemiesAndFight();
+    this->updateEnemies();
+    this->updateWar();
     this->updateGUI();
 
 }
@@ -248,6 +275,7 @@ void Game::render() {
 
     this->window->display();
 }
+
 
 
 

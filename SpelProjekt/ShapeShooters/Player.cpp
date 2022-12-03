@@ -9,7 +9,7 @@
  */
 
 void Player::initializeVariables() {
-    this->movementVelocity = 2.f;
+    this->movementVelocity = 3.f;
     this->attackControlMax = 10.f;
     this->attackControl = this->attackControlMax;
 }
@@ -19,7 +19,7 @@ void Player::initializeTexture() {
      * A texture will be loaded from a file.
      */
     if(!this->texture.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/shapeshooter.png")){
-        std::cout << "ERROR::PLAYER::INITIALIZETEXTURE::Failed to load the file!" << "\n";
+        std::cout << "Failed to load the file!" << "\n";
     }
 }
 
@@ -32,7 +32,7 @@ void Player::initializeSprite() {
     /*
      * Resize the sprite here.
      */
-    this->sprite.scale(0.2f, 0.2f);
+    this->sprite.scale(0.4f, 0.4f);
 }
 
 
