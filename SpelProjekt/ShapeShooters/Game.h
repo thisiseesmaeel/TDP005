@@ -33,6 +33,12 @@ private:
     sf::Text pointText;
 
     /*
+     * Universe
+     */
+    sf::Texture universeBackgroundTexture;
+    sf::Sprite universeBackground;
+
+    /*
      * Player
      */
     Player* player{};
@@ -52,6 +58,7 @@ private:
     void initializeWindow();
     void initializeTextures();
     void initializeGUI();
+    void initializeUniverse();
     void initializePlayer();
     void initializeEnemy();
 
@@ -74,11 +81,14 @@ public:
     void updatePollEvents();
     void updateInput();
     void updateGUI();
+    void updateUniverse();
+    void updateCollision();
     void updateBullets();
     void updateEnemies();
     void updateWar();
     void update();
     void renderGUI();
+    void renderUniverse();
     void render();
 
 };

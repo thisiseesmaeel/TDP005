@@ -35,11 +35,16 @@ public:
     virtual ~Player();
 
     /*
-     * Player accessor
+     * Player accessors
      */
     const sf::Vector2f& getPos() const;
     sf::FloatRect getBounds() const;
 
+    /*
+     * Player modifiers
+     */
+    void setPosition(const sf::Vector2f position);
+    void setPosition(const float x, const float y);
     /*
      * Player public functions
      */

@@ -10,6 +10,7 @@ Game::Game() {
     this->initializeWindow();
     this->initializeTextures();
     this->initializeGUI();
+    this->initializeUniverse();
     this->initializePlayer();
     this->initializeEnemy();
 }
@@ -51,21 +52,21 @@ void Game::initializeWindow() {
      * Setting the frame rate limit.
      * Setting the Vsync as false.
      */
-    this->window = new sf::RenderWindow(sf::VideoMode(1800, 1000), "Shape Shooters", sf::Style::Close | sf::Style::Titlebar | sf::Style::Resize);
+    this->window = new sf::RenderWindow(sf::VideoMode(1600, 900), "Shape Shooters", sf::Style::Close | sf::Style::Titlebar | sf::Style::Resize);
     this->window->setFramerateLimit(144);
     this->window->setVerticalSyncEnabled(false);
 }
 
 void Game::initializeTextures() {
     this->textures["BULLET"] = new sf::Texture();
-    this->textures["BULLET"]->loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/bullet.png");
+    this->textures["BULLET"]->loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/Textures/bullet.png");
 }
 
 void Game::initializeGUI() {
     /*
      * Fonts are loaded here
      */
-    if(!this->font.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/Nasa21-l23X.ttf")){
+    if(!this->font.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/Textures/Nasa21-l23X.ttf")){
         std::cout << "Font can not be loaded!" << std::endl;
     }
     /*
@@ -77,6 +78,12 @@ void Game::initializeGUI() {
     this->pointText.setString("Hej");
 }
 
+void Game::initializeUniverse() {
+    if(!this->universeBackgroundTexture.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/Textures/background.jpeg")){
+        std::cout << "World background texture fails to load!" << std::endl;
+    }
+    this->universeBackground.setTexture(this->universeBackgroundTexture);
+}
 
 void Game::initializePlayer() {
     this->player = new Player();
@@ -142,14 +149,29 @@ void Game::updateInput() {
      */
     if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && this->player->canAttack()){
         this->bullets.push_back(new Bullet(this->textures["BULLET"],
-                                           this->player->getPos().x + this->player->getBounds().width/3.f,
-                                           this->player->getPos().y, 0.f, -1.f, 5.f));
+                                           this->player->getPos().x + this->player->getBounds().width/2.5f,
+                                           this->player->getPos().y,
+                                           0.f, -0.5f,
+                                           5.f));
     }
 
 }
 
 void Game::updateGUI() {
 
+}
+
+void Game::updateUniverse() {
+
+}
+
+void Game::updateCollision() {
+    /*
+     * When player collides with the corners of the screen.
+     */
+    if(this->player->getBounds().left < 0.f){
+        this->player->setPosition(0.f, this->player->getBounds().top);
+    }
 }
 
 
@@ -243,10 +265,12 @@ void Game::update() {
     this->updatePollEvents();
     this->updateInput();
     this->player->update();
+    this->updateCollision();
     this->updateBullets();
     this->updateEnemies();
     this->updateWar();
     this->updateGUI();
+    this->updateUniverse();
 
 }
 
@@ -254,8 +278,20 @@ void Game::renderGUI() {
     this->window->draw(this->pointText);
 }
 
+void Game::renderUniverse() {
+    this->window->draw(this->universeBackground);
+}
+
+
 void Game::render() {
     this->window->clear();
+
+
+    /*
+     * Draw universe
+     */
+    this->renderUniverse();
+
 
     /*
      * Drawing everything here
@@ -275,6 +311,11 @@ void Game::render() {
 
     this->window->display();
 }
+
+
+
+
+
 
 
 

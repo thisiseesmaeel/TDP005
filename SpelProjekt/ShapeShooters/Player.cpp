@@ -18,7 +18,7 @@ void Player::initializeTexture() {
     /*
      * A texture will be loaded from a file.
      */
-    if(!this->texture.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/shapeshooter.png")){
+    if(!this->texture.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/Textures/shapeshooter.png")){
         std::cout << "Failed to load the file!" << "\n";
     }
 }
@@ -46,12 +46,27 @@ Player::Player() {
 
 Player::~Player() = default;
 
+/*
+ * Player accessor implementation
+ */
 const sf::Vector2f &Player::getPos() const {
     return this->sprite.getPosition();
 }
 sf::FloatRect Player::getBounds() const {
     return this->sprite.getGlobalBounds();
 }
+
+/*
+ * Player modifier implementation
+ */
+void Player::setPosition(const sf::Vector2f position) {
+    this->sprite.setPosition(position);
+}
+
+void Player::setPosition(const float x, const float y) {
+    this->sprite.setPosition(x, y);
+}
+
 
 /*
  * Player public functions
@@ -82,6 +97,9 @@ void Player::update() {
 void Player::render(sf::RenderTarget& target) {
     target.draw(this->sprite);
 }
+
+
+
 
 
 
