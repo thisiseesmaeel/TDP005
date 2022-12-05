@@ -498,4 +498,5 @@ CMakeFiles/ShapeShooters.dir/Game.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/istream \
   /Users/ismailsafwat/CLionProjects/ShapeShooters/Bullet.h \
-  /Users/ismailsafwat/CLionProjects/ShapeShooters/Enemy.h
+  /Users/ismailsafwat/CLionProjects/ShapeShooters/Enemy.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/sstream

@@ -9,41 +9,48 @@
 #include "Bullet.h"
 #include "Enemy.h"
 #include<map>
+#include<string>
+#include<sstream>
 
 
 class Game {
 private:
-    /*
+    /**
      * Window
      */
     sf::RenderWindow* window{};
 
-    /*
+    /**
      * Resources
      */
-    //For each string there will be textures.
-    //I made Texture as pointer because I want to make sure map contains the actual textures.
+    ///For each string there will be textures.
+    ///I made Texture as pointer because I want to make sure map contains the actual textures.
     std::map<std::string, sf::Texture*> textures;
     std::vector<Bullet*> bullets;
 
-    /*
+    /**
      * GUI
      */
     sf::Font font;
     sf::Text pointText;
 
-    /*
+    /**
      * Universe
      */
     sf::Texture universeBackgroundTexture;
     sf::Sprite universeBackground;
 
-    /*
+    /**
+     * Points
+     */
+     unsigned points;
+
+    /**
      * Player
      */
     Player* player{};
 
-    /*
+    /**
      * Enemy
      * Here defines many enemies instead of one.
      */
@@ -52,29 +59,31 @@ private:
     std::vector<Enemy*> enemies;
 
 
-    /*
+    /**
      * Game Private functions
      */
     void initializeWindow();
     void initializeTextures();
     void initializeGUI();
     void initializeUniverse();
+    void initializeSystems();
+    void initializeVariables();
     void initializePlayer();
     void initializeEnemy();
 
 public:
-    /*
+    /**
      * Game constructor
      */
     Game();
-    /*
+    /**
      * Game destructor
      */
     virtual ~Game();
 
 
 
-    /*
+    /**
      * Game public functions
      */
     void run();

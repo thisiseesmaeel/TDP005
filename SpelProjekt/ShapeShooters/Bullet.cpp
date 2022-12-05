@@ -3,7 +3,9 @@
 //
 
 #include "Bullet.h"
-
+/**
+ * Bullet constructor
+ */
 Bullet::Bullet() = default;
 
 Bullet::Bullet(sf::Texture* texture, float positionX, float positionY, float coordinateX, float coordinateY, float movementVelocity) {
@@ -15,18 +17,20 @@ Bullet::Bullet(sf::Texture* texture, float positionX, float positionY, float coo
     this->shape.scale(0.06f, 0.02f);
 
 }
-
+/**
+ * Bullet destructor
+ */
 Bullet::~Bullet() = default;
 
 sf::FloatRect Bullet::getBounds() const {
     return this->shape.getGlobalBounds();
 }
 
-/*
- * Bullet public functions
+/**
+ * Bullet public functions implementation
  */
 void Bullet::update() {
-    /*
+    /**
      * How we move the bullet
      */
     this->shape.move(this->movementVelocity * this->direction);

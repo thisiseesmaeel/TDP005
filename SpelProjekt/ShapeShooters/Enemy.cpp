@@ -4,7 +4,7 @@
 
 #include "Enemy.h"
 
-/*
+/**
  * Enemy private functions
  */
 void Enemy::initializeShape() {
@@ -22,8 +22,8 @@ void Enemy::initializeVariables() {
     this->points = 6;
 }
 
-/*
- * Enemy constructor and destructor
+/**
+ * Enemy constructor
  */
 Enemy::Enemy(float positionX, float positionY) {
     this->initializeShape();
@@ -32,6 +32,9 @@ Enemy::Enemy(float positionX, float positionY) {
 
 }
 
+/**
+ * Enemy destructor
+ */
 Enemy::~Enemy() {
 
 }
@@ -41,7 +44,7 @@ sf::FloatRect Enemy::getBounds() const {
     return this->shape.getGlobalBounds();
 }
 
-/*
+/**
  * Enemy public functions
  */
 void Enemy::update() {

@@ -4,18 +4,18 @@
 
 #include "Player.h"
 
-/*
+/**
  * Player Private functions
  */
 
 void Player::initializeVariables() {
-    this->movementVelocity = 3.f;
+    this->movementVelocity = 4.f;
     this->attackControlMax = 10.f;
     this->attackControl = this->attackControlMax;
 }
 
 void Player::initializeTexture() {
-    /*
+    /**
      * A texture will be loaded from a file.
      */
     if(!this->texture.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/Textures/shapeshooter.png")){
@@ -24,12 +24,12 @@ void Player::initializeTexture() {
 }
 
 void Player::initializeSprite() {
-    /*
+    /**
      * The texture will be set to the sprite.
      */
     this->sprite.setTexture(this->texture);
 
-    /*
+    /**
      * Resize the sprite here.
      */
     this->sprite.scale(0.4f, 0.4f);
@@ -46,7 +46,7 @@ Player::Player() {
 
 Player::~Player() = default;
 
-/*
+/**
  * Player accessor implementation
  */
 const sf::Vector2f &Player::getPos() const {
@@ -56,7 +56,7 @@ sf::FloatRect Player::getBounds() const {
     return this->sprite.getGlobalBounds();
 }
 
-/*
+/**
  * Player modifier implementation
  */
 void Player::setPosition(const sf::Vector2f position) {
@@ -68,7 +68,7 @@ void Player::setPosition(const float x, const float y) {
 }
 
 
-/*
+/**
  * Player public functions
  */
 void Player::move(const float coordinateX, const float coordinateY) {

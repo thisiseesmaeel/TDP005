@@ -3,25 +3,26 @@
 //
 
 #include "Game.h"
-/*
- * Constructor
+/**
+ * Game Constructor
  */
 Game::Game() {
     this->initializeWindow();
     this->initializeTextures();
     this->initializeGUI();
     this->initializeUniverse();
+    this->initializeSystems();
     this->initializePlayer();
     this->initializeEnemy();
 }
-/*
- * Destructor
+/**
+ * Game Destructor
  */
 Game::~Game() {
     delete this->window;
     delete this->player;
 
-    /*
+    /**
      * To avoid memory leaks after the game ends
      * Delete textures
      */
@@ -29,13 +30,13 @@ Game::~Game() {
         delete t.second;
     }
 
-    /*
+    /**
      * Delete bullets
      */
     for(auto *b : this->bullets){
         delete b;
     }
-    /*
+    /**
      * Delete enemies
      */
     for(auto *e : this->enemies){
@@ -43,11 +44,11 @@ Game::~Game() {
     }
 }
 
-/*
+/**
  * Private functions
  */
 void Game::initializeWindow() {
-    /*
+    /**
      * Initializing window with the application name.
      * Setting the frame rate limit.
      * Setting the Vsync as false.
@@ -63,19 +64,18 @@ void Game::initializeTextures() {
 }
 
 void Game::initializeGUI() {
-    /*
+    /**
      * Fonts are loaded here
      */
     if(!this->font.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/Textures/Nasa21-l23X.ttf")){
         std::cout << "Font can not be loaded!" << std::endl;
     }
-    /*
+    /**
      * Initializing Point texts here
      */
     this->pointText.setFont(this->font);
     this->pointText.setCharacterSize(14);
     this->pointText.setFillColor(sf::Color::Cyan);
-    this->pointText.setString("Hej");
 }
 
 void Game::initializeUniverse() {
@@ -83,6 +83,10 @@ void Game::initializeUniverse() {
         std::cout << "World background texture fails to load!" << std::endl;
     }
     this->universeBackground.setTexture(this->universeBackgroundTexture);
+}
+
+void Game::initializeSystems() {
+    this->points = 0;
 }
 
 void Game::initializePlayer() {
@@ -95,8 +99,8 @@ void Game::initializeEnemy() {
     this->spawnTimer = this->spawnTimerMax;
 }
 
-/*
- * Functions
+/**
+ * Game functions implementation
  */
 void Game::run() {
 
@@ -114,7 +118,7 @@ void Game::updatePollEvents() {
 
     sf::Event e{};
     while(this->window->pollEvent(e)) {
-        /*
+        /**
          * Two different ways to close the window:
          * 1. by pressing the close button
          * 2. by pressing the Esc button on the keyboard
@@ -128,23 +132,23 @@ void Game::updatePollEvents() {
 }
 
 void Game::updateInput() {
-    /*
+    /**
      * Move Player
      */
-    //MOVE TO THE LEFT
+    ///MOVE TO THE LEFT
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
         this->player->move(-1.f, 0.f);
-    //MOVE TO THE RIGHT
+    ///MOVE TO THE RIGHT
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
         this->player->move(1.f, 0.f);
-    //MOVE FORWARD
+    ///MOVE FORWARD
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))
         this->player->move(0.f, -1.f);
-    //MOVE BACKWARD
+    ///MOVE BACKWARD
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
         this->player->move(0.f, 1.f);
 
-    /*
+    /**
      * When left button of mouse is pressed and player can attack
      */
     if(sf::Mouse::isButtonPressed(sf::Mouse::Left) && this->player->canAttack()){
@@ -158,7 +162,9 @@ void Game::updateInput() {
 }
 
 void Game::updateGUI() {
-
+    std::stringstream ss;
+    ss << "Points: " << this->points;
+    this->pointText.setString(ss.str());
 }
 
 void Game::updateUniverse() {
@@ -166,11 +172,27 @@ void Game::updateUniverse() {
 }
 
 void Game::updateCollision() {
-    /*
+    /**
      * When player collides with the corners of the screen.
      */
+    /// Left corner of the screen
     if(this->player->getBounds().left < 0.f){
         this->player->setPosition(0.f, this->player->getBounds().top);
+    }
+
+    /// Right corner of the screen
+    else if(this->player->getBounds().left + this->player->getBounds().width >= this->window->getSize().x){
+        this->player->setPosition(this->window->getSize().x - this->player->getBounds().width, this->player->getBounds().top);
+    }
+
+    /// Top corner of the screen
+    if(this->player->getBounds().top < 0.f){
+        this->player->setPosition(this->player->getBounds().top, 0.f);
+    }
+
+    /// Bottom corner of the screen
+    else if(this->player->getBounds().top + this->player->getBounds().height >= this->window->getSize().y){
+        this->player->setPosition(this->player->getBounds().left, this->window->getSize().y - this->player->getBounds().height);
     }
 }
 
@@ -179,12 +201,12 @@ void Game::updateBullets() {
     unsigned counter = 0;
     for(auto *bullet : bullets){
         bullet->update();
-        /*
+        /**
          * Managing bullets when going toward top of the screen
          */
         if(bullet->getBounds().top + bullet->getBounds().height < 0.f){
 
-            // Delete bullet from memory and erase them as well.
+            /// Delete bullet from memory and erase them as well.
             delete this->bullets.at(counter);
             this->bullets.erase(this->bullets.begin() + counter);
             --counter;
@@ -199,7 +221,7 @@ void Game::updateBullets() {
 
 void Game::updateEnemies() {
 
-    /*
+    /**
      * Enemies spawn here
      */
     this->spawnTimer += 0.5f;
@@ -208,18 +230,18 @@ void Game::updateEnemies() {
         this->spawnTimer = 0.f;
     }
 
-    /*
+    /**
      * Updating enemies here
      */
     unsigned counter = 0;
     for(auto *enemy : enemies){
         enemy->update();
-        /*
+        /**
          * Managing enemies when going toward bottom of the screen
          */
         if(enemy->getBounds().top > this->window->getSize().y){
 
-            // Delete enemy from memory and erase them as well.
+            /// Delete enemy from memory and erase them as well.
             delete this->enemies.at(counter);
             this->enemies.erase(this->enemies.begin() + counter);
             --counter;
@@ -237,18 +259,18 @@ void Game::updateWar() {
     for(int e = 0; e < this->enemies.size(); ++e){
         bool isEnemyDeleted = false;
         for (int b = 0; b < bullets.size() && isEnemyDeleted == false; b++) {
-            /*
+            /**
              * Check the collision between enemy and bullet
              */
             if(this->enemies[e]->getBounds().intersects(this->bullets[b]->getBounds())){
 
-                /*
+                /**
                  * Delete and erase enemy after collision
                  */
                 delete this->enemies[e];
                 this->enemies.erase(this->enemies.begin() + e);
 
-                /*
+                /**
                  * Delete and erase bullet after collision
                  */
                 delete this->bullets[b];
@@ -287,16 +309,16 @@ void Game::render() {
     this->window->clear();
 
 
-    /*
+    /**
      * Draw universe
      */
     this->renderUniverse();
 
 
-    /*
+    /**
      * Drawing everything here
      */
-    //Render the player inside the window
+    ///Render the player inside the window
     this->player->render(*this->window);
 
     for(auto *bullet : bullets){
@@ -311,6 +333,8 @@ void Game::render() {
 
     this->window->display();
 }
+
+
 
 
 

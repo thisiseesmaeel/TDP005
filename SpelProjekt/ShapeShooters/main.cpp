@@ -2,6 +2,10 @@
 #include "Game.h"
 #include<ctime>
 
+/**
+ * Main function
+ * @return
+ */
 int main() {
 
 

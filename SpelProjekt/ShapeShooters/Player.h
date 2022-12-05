@@ -25,27 +25,29 @@ private:
     void initializeTexture();
     void initializeSprite();
 public:
-    /*
+    /**
      * Player constructor
      */
     Player();
-    /*'
+
+    /**
      * Player destructor
      */
     virtual ~Player();
 
-    /*
+    /**
      * Player accessors
      */
     const sf::Vector2f& getPos() const;
     sf::FloatRect getBounds() const;
 
-    /*
+    /**
      * Player modifiers
      */
     void setPosition(const sf::Vector2f position);
     void setPosition(const float x, const float y);
-    /*
+
+    /**
      * Player public functions
      */
     void move(float coordinateX, float coordinateY);

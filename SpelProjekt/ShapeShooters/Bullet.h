@@ -15,29 +15,30 @@ private:
     sf::Vector2f direction;
     float movementVelocity{};
 
-    /*
+    /**
      * Bullet private functions
      */
 
 public:
-    /*
+    /**
      * Bullet Default Constructor
      */
     Bullet();
-    /*
+    /**
      * Bullet constructor
      */
     Bullet(sf::Texture* texture, float positionX, float positionY, float coordinateX, float coordinateY, float movementVelocity);
-    /*
+    /**
      * Bullet destructor
      */
     virtual ~Bullet();
 
-    /*
+    /**
      * Bullet accessors
      */
     sf::FloatRect getBounds() const;
-    /*
+
+    /**
      * Bullet public functions
      */
     void update();

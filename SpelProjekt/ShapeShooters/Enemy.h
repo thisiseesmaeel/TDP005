@@ -19,27 +19,28 @@ private:
     int damage;
     int points;
 
-    /*
+    /**
      * Enemy private functions
      */
     void initializeShape();
     void initializeVariables();
 public:
-    /*
+    /**
      * Enemy constructor
      */
     Enemy(float positionX, float positionY);
-    /*
+
+    /**
      * Enemy destructor
      */
     virtual ~Enemy();
 
-    /*
+    /**
      * Enemy accessor
      */
     sf::FloatRect getBounds() const;
 
-    /*
+    /**
      * Enemy public functions
      */
     void update();
