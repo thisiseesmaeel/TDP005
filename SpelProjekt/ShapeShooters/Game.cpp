@@ -67,7 +67,7 @@ void Game::initializeGUI() {
     /**
      * Fonts are loaded here
      */
-    if(!this->font.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/Textures/Nasa21-l23X.ttf")){
+    if(!this->font.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/Fonts/Nasa21-l23X.ttf")){
         std::cout << "Font can not be loaded!" << std::endl;
     }
     /**
@@ -226,7 +226,7 @@ void Game::updateEnemies() {
      */
     this->spawnTimer += 0.5f;
     if(this->spawnTimer >= this->spawnTimerMax){
-        this->enemies.push_back(new Enemy(rand() % this->window->getSize().x-20.f, -100.f));
+        this->enemies.push_back(new Enemy(rand() % this->window->getSize().x-10.f, -50.f));
         this->spawnTimer = 0.f;
     }
 

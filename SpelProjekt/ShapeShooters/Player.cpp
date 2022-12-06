@@ -9,7 +9,7 @@
  */
 
 void Player::initializeVariables() {
-    this->movementVelocity = 4.f;
+    this->movementVelocity = 5.f;
     this->attackControlMax = 10.f;
     this->attackControl = this->attackControlMax;
 }

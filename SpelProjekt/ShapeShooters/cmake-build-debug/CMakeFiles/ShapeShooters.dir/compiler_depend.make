@@ -1499,7 +1499,8 @@ CMakeFiles/ShapeShooters.dir/Game.cpp.o: /Users/ismailsafwat/CLionProjects/Shape
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/istream \
   /Users/ismailsafwat/CLionProjects/ShapeShooters/Bullet.h \
-  /Users/ismailsafwat/CLionProjects/ShapeShooters/Enemy.h
+  /Users/ismailsafwat/CLionProjects/ShapeShooters/Enemy.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/sstream
 
 CMakeFiles/ShapeShooters.dir/Player.cpp.o: /Users/ismailsafwat/CLionProjects/ShapeShooters/Player.cpp \
   /Users/ismailsafwat/CLionProjects/ShapeShooters/Player.h \
@@ -2500,7 +2501,8 @@ CMakeFiles/ShapeShooters.dir/main.cpp.o: /Users/ismailsafwat/CLionProjects/Shape
   /usr/local/include/SFML/Graphics/Text.hpp \
   /usr/local/include/SFML/Graphics/VertexBuffer.hpp \
   /Users/ismailsafwat/CLionProjects/ShapeShooters/Bullet.h \
-  /Users/ismailsafwat/CLionProjects/ShapeShooters/Enemy.h
+  /Users/ismailsafwat/CLionProjects/ShapeShooters/Enemy.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/sstream
 
 
 /Users/ismailsafwat/CLionProjects/ShapeShooters/main.cpp:
@@ -2570,6 +2572,8 @@ CMakeFiles/ShapeShooters.dir/main.cpp.o: /Users/ismailsafwat/CLionProjects/Shape
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__split_buffer:
 
 /usr/local/include/SFML/Window/Sensor.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/sstream:
 
 /usr/local/include/SFML/Window/Mouse.hpp:
 
