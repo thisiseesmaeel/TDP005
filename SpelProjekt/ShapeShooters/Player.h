@@ -44,8 +44,8 @@ public:
     /**
      * Player modifiers
      */
-    void setPosition(const sf::Vector2f position);
-    void setPosition(const float x, const float y);
+    void setPosition(sf::Vector2f position);
+    void setPosition(float x, float y);
 
     /**
      * Player public functions

@@ -60,14 +60,14 @@ void Game::initializeWindow() {
 
 void Game::initializeTextures() {
     this->textures["BULLET"] = new sf::Texture();
-    this->textures["BULLET"]->loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/Textures/bullet.png");
+    this->textures["BULLET"]->loadFromFile("../Textures/bullet2.png");
 }
 
 void Game::initializeGUI() {
     /**
      * Fonts are loaded here
      */
-    if(!this->font.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/Fonts/Nasa21-l23X.ttf")){
+    if(!this->font.loadFromFile("../Fonts/Nasa21-l23X.ttf")){
         std::cout << "Font can not be loaded!" << std::endl;
     }
     /**
@@ -79,7 +79,7 @@ void Game::initializeGUI() {
 }
 
 void Game::initializeUniverse() {
-    if(!this->universeBackgroundTexture.loadFromFile("/Users/ismailsafwat/CLionProjects/ShapeShooters/Textures/background.jpeg")){
+    if(!this->universeBackgroundTexture.loadFromFile("../Textures/background.jpeg")){
         std::cout << "World background texture fails to load!" << std::endl;
     }
     this->universeBackground.setTexture(this->universeBackgroundTexture);
@@ -248,6 +248,14 @@ void Game::updateEnemies() {
 
             std::cout << this->enemies.size() << std::endl;
         }
+        /**
+         * If enemy collides with player then it (enemy) still will be erased
+         */
+        else if(enemy->getBounds().intersects(this->player->getBounds())){
+            delete this->enemies.at(counter);
+            this->enemies.erase(this->enemies.begin() + counter);
+            --counter;
+        }
 
         ++counter;
     }
@@ -264,6 +272,10 @@ void Game::updateWar() {
              */
             if(this->enemies[e]->getBounds().intersects(this->bullets[b]->getBounds())){
 
+                /**
+                 * Getting points when bullet collides with enemy
+                 */
+                this->points += this->enemies[e]->getPoints();
                 /**
                  * Delete and erase enemy after collision
                  */
