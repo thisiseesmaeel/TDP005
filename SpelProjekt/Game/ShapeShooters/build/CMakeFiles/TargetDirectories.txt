@@ -1,0 +1,3 @@
+/Users/ismailsafwat/CLionProjects/ShapeShooters/build/CMakeFiles/ShapeShooters.dir
+/Users/ismailsafwat/CLionProjects/ShapeShooters/build/CMakeFiles/edit_cache.dir
+/Users/ismailsafwat/CLionProjects/ShapeShooters/build/CMakeFiles/rebuild_cache.dir

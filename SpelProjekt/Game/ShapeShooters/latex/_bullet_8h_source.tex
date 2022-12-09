@@ -1,0 +1,37 @@
+\hypertarget{_bullet_8h_source}{}\doxysection{Bullet.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by Ismail Safwat on 2022-\/12-\/02.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef BULLET\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define BULLET\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include<SFML/Graphics.hpp>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include<iostream>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_bullet}{Bullet}} \{}
+\DoxyCodeLine{12 \textcolor{keyword}{private}:}
+\DoxyCodeLine{13     sf::Sprite shape;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     sf::Vector2f direction;}
+\DoxyCodeLine{16     \textcolor{keywordtype}{float} movementVelocity\{\};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_bullet_acd7befc0bc18907cc1d871d37bbdddeb}{Bullet}}();}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_bullet_acd7befc0bc18907cc1d871d37bbdddeb}{Bullet}}(sf::Texture* texture, \textcolor{keywordtype}{float} positionX, \textcolor{keywordtype}{float} positionY, \textcolor{keywordtype}{float} coordinateX, \textcolor{keywordtype}{float} coordinateY, \textcolor{keywordtype}{float} movementVelocity);}
+\DoxyCodeLine{34     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_bullet_aaeb5cb41d7db89f49007b08b41f1bfcf}{\string~Bullet}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{39     sf::FloatRect \mbox{\hyperlink{class_bullet_a9687c8659ec2cf20cc262422c8ae8467}{getBounds}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bullet_a32f4a0611fe2dd245fee955d14ca1f68}{update}}();}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} render(sf::RenderTarget* target);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#endif }}
+
+\end{DoxyCode}
