@@ -41,6 +41,7 @@ public:
      */
     sf::FloatRect getBounds() const;
     const int& getPoints() const;
+    const int& getDamage() const;
 
     /**
      * Enemy public functions

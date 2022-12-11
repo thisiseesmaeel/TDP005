@@ -12,7 +12,7 @@ void Player::initializeVariables() {
     this->movementVelocity = 5.f;
     this->attackControlMax = 10.f;
     this->attackControl = this->attackControlMax;
-    this->healthPointMax = 20;
+    this->healthPointMax = 100;
     this->healthPoint = this->healthPointMax;
 
 }
@@ -84,6 +84,9 @@ void Player::setHealthPoint(const int hp) {
 
 void Player::reduceHealthPoint(const int value) {
     this->healthPoint -= value;
+    if(this->healthPoint < 0){
+        this->healthPoint = 0;
+    }
 }
 
 

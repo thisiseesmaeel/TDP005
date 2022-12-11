@@ -29,10 +29,11 @@ private:
     std::vector<Bullet*> bullets;
 
     /**
-     * GUI
+     * Game GUI
      */
     sf::Font font;
     sf::Text pointText;
+    sf::Text gameOverText;
 
     /**
      * Universe

@@ -73,9 +73,19 @@ void Game::initializeGUI() {
     /**
      * Initializing Point texts here
      */
+    this->pointText.setPosition(1500.f, 25.f);
     this->pointText.setFont(this->font);
-    this->pointText.setCharacterSize(14);
+    this->pointText.setCharacterSize(20);
     this->pointText.setFillColor(sf::Color::Cyan);
+
+    this->gameOverText.setFont(this->font);
+    this->gameOverText.setCharacterSize(75);
+    this->gameOverText.setFillColor(sf::Color::Red);
+    this->gameOverText.setString("Game Over!");
+    /**
+     * Centering the game over text here
+     */
+    this->gameOverText.setPosition(this->window->getSize().x / 2.f - this->gameOverText.getGlobalBounds().width / 2.f, this->window->getSize().y / 2.f);
 
     /**
      * Initialize player GUI here
@@ -115,11 +125,14 @@ void Game::initializeEnemy() {
 void Game::run() {
 
     while(this->window->isOpen()){
-        /*
-         * First update then render the game.
-         */
-        this->update();
-        this->render();
+        this->updatePollEvents();
+        if(this->player->getHealthPoint() > 0) {
+            this->update();
+            /*
+             * First update then render the game.
+             */
+            this->render();
+        }
     }
 
 }
@@ -175,13 +188,11 @@ void Game::updateGUI() {
     std::stringstream ss;
     ss << "Points: " << this->points;
     this->pointText.setString(ss.str());
-    this->pointText.setCharacterSize(20);
 
     /**
      * Here we update player's GUI
      * At healthPointPercent, we get the percentage of health point
      */
-    this->player->setHealthPoint(10);
     float healthPointPercent =static_cast<float>(this->player->getHealthPoint()) / this->player->getHealthPointMax();
     this->playerHealthPointBar.setSize(sf::Vector2f(300.f * healthPointPercent, this->playerHealthPointBar.getSize().y));
 
@@ -229,9 +240,6 @@ void Game::updateBullets() {
             /// Delete bullet from memory and erase them as well.
             delete this->bullets.at(counter);
             this->bullets.erase(this->bullets.begin() + counter);
-            --counter;
-
-            std::cout << this->bullets.size() << std::endl;
         }
 
         ++counter;
@@ -264,7 +272,6 @@ void Game::updateEnemies() {
             /// Delete enemy from memory and erase them as well.
             delete this->enemies.at(counter);
             this->enemies.erase(this->enemies.begin() + counter);
-            --counter;
 
             std::cout << this->enemies.size() << std::endl;
         }
@@ -272,9 +279,9 @@ void Game::updateEnemies() {
          * If enemy collides with player then it (enemy) still will be erased
          */
         else if(enemy->getBounds().intersects(this->player->getBounds())){
+            this->player->reduceHealthPoint(this->enemies.at(counter)->getDamage());
             delete this->enemies.at(counter);
             this->enemies.erase(this->enemies.begin() + counter);
-            --counter;
         }
 
         ++counter;
@@ -316,7 +323,6 @@ void Game::updateWar() {
 
 void Game::update() {
 
-    this->updatePollEvents();
     this->updateInput();
     this->player->update();
     this->updateCollision();
@@ -367,6 +373,13 @@ void Game::render() {
     }
 
     this->renderGUI();
+
+    /**
+     * Rendering game over screen here
+     */
+    if(this->player->getHealthPoint() <= 0){
+        this->window->draw(this->gameOverText);
+    }
 
     this->window->display();
 }

@@ -50,6 +50,10 @@ const int &Enemy::getPoints() const {
     return this->points;
 }
 
+const int &Enemy::getDamage() const {
+    return this->damage;
+}
+
 
 /**
  * Enemy public functions
@@ -61,6 +65,7 @@ void Enemy::update() {
 void Enemy::render(sf::RenderTarget* target) {
     target->draw(this->shape);
 }
+
 
 
 
