@@ -18,12 +18,16 @@ private:
 
     float attackControl{};
     float attackControlMax{};
+
+    int healthPoint;
+    int healthPointMax;
     /*
      * Player Private functions
      */
     void initializeVariables();
     void initializeTexture();
     void initializeSprite();
+
 public:
     /**
      * Player constructor
@@ -40,12 +44,18 @@ public:
      */
     const sf::Vector2f& getPos() const;
     sf::FloatRect getBounds() const;
+    const int& getHealthPoint() const;
+    const int& getHealthPointMax() const;
 
     /**
      * Player modifiers
+     * Set the position of the player
+     * Set and reduce the health point of the player
      */
     void setPosition(sf::Vector2f position);
     void setPosition(float x, float y);
+    void setHealthPoint(const int hp);
+    void reduceHealthPoint(const int value);
 
     /**
      * Player public functions

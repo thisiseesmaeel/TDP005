@@ -51,6 +51,12 @@ private:
     Player* player{};
 
     /**
+     * Player GUI
+     */
+     sf::RectangleShape playerHealthPointBar;
+     sf::RectangleShape playerHealthPointBarBackground;
+
+    /**
      * Enemy
      * Here defines many enemies instead of one.
      */

@@ -76,6 +76,16 @@ void Game::initializeGUI() {
     this->pointText.setFont(this->font);
     this->pointText.setCharacterSize(14);
     this->pointText.setFillColor(sf::Color::Cyan);
+
+    /**
+     * Initialize player GUI here
+     */
+    this->playerHealthPointBar.setSize(sf::Vector2f(300.f, 25.f));
+    this->playerHealthPointBar.setPosition(sf::Vector2(25.f, 25.f));
+    this->playerHealthPointBar.setFillColor(sf::Color::Red);
+
+    this->playerHealthPointBarBackground = this->playerHealthPointBar;
+    this->playerHealthPointBarBackground.setFillColor(sf::Color(25, 25, 25, 255));
 }
 
 void Game::initializeUniverse() {
@@ -155,7 +165,7 @@ void Game::updateInput() {
         this->bullets.push_back(new Bullet(this->textures["BULLET"],
                                            this->player->getPos().x + this->player->getBounds().width/2.5f,
                                            this->player->getPos().y,
-                                           0.f, -0.5f,
+                                           0.f, -1.f,
                                            5.f));
     }
 
@@ -165,6 +175,16 @@ void Game::updateGUI() {
     std::stringstream ss;
     ss << "Points: " << this->points;
     this->pointText.setString(ss.str());
+    this->pointText.setCharacterSize(20);
+
+    /**
+     * Here we update player's GUI
+     * At healthPointPercent, we get the percentage of health point
+     */
+    this->player->setHealthPoint(10);
+    float healthPointPercent =static_cast<float>(this->player->getHealthPoint()) / this->player->getHealthPointMax();
+    this->playerHealthPointBar.setSize(sf::Vector2f(300.f * healthPointPercent, this->playerHealthPointBar.getSize().y));
+
 }
 
 void Game::updateUniverse() {
@@ -309,7 +329,12 @@ void Game::update() {
 }
 
 void Game::renderGUI() {
+    /**
+     * The order of rendering is extremely important!
+     */
     this->window->draw(this->pointText);
+    this->window->draw(this->playerHealthPointBarBackground);
+    this->window->draw(this->playerHealthPointBar);
 }
 
 void Game::renderUniverse() {

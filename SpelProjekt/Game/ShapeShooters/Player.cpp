@@ -12,6 +12,9 @@ void Player::initializeVariables() {
     this->movementVelocity = 5.f;
     this->attackControlMax = 10.f;
     this->attackControl = this->attackControlMax;
+    this->healthPointMax = 20;
+    this->healthPoint = this->healthPointMax;
+
 }
 
 void Player::initializeTexture() {
@@ -56,6 +59,14 @@ sf::FloatRect Player::getBounds() const {
     return this->sprite.getGlobalBounds();
 }
 
+const int &Player::getHealthPoint() const {
+    return this->healthPoint;
+}
+
+const int &Player::getHealthPointMax() const {
+    return this->healthPointMax;
+}
+
 /**
  * Player modifier implementation
  */
@@ -66,6 +77,16 @@ void Player::setPosition(const sf::Vector2f position) {
 void Player::setPosition(const float x, const float y) {
     this->sprite.setPosition(x, y);
 }
+
+void Player::setHealthPoint(const int hp) {
+    this->healthPoint = hp;
+}
+
+void Player::reduceHealthPoint(const int value) {
+    this->healthPoint -= value;
+}
+
+
 
 
 /**
@@ -97,6 +118,11 @@ void Player::update() {
 void Player::render(sf::RenderTarget& target) {
     target.draw(this->sprite);
 }
+
+
+
+
+
 
 
 
