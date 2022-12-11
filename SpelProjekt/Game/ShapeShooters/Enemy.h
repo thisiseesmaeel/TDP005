@@ -1,7 +1,3 @@
-//
-// Created by Ismail Safwat on 2022-12-03.
-//
-
 #ifndef ENEMY_H
 #define ENEMY_H
 
@@ -14,7 +10,6 @@ private:
     unsigned pointCount;
     sf::CircleShape shape;
     float speed;
-    int type;
     int healthPoint;
     int healthPointMax;
     int damage;
@@ -22,6 +17,7 @@ private:
 
     /**
      * Enemy private functions
+     * Variables and shape are initialized here
      */
     void initializeVariables();
     void initializeShape();
@@ -45,6 +41,7 @@ public:
 
     /**
      * Enemy public functions
+     * Like Player, enemy is needed to get updated and rendered which is defined here via update() and render() respectively.
      */
     void update();
     void render(sf::RenderTarget* target);

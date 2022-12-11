@@ -89,12 +89,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adef398a1e909cbc6882977e4c978b57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c3b0dc39ec07fa1205d6f23e267b15c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a9c3b0dc39ec07fa1205d6f23e267b15c">updateInput</a> ()</td></tr>
 <tr class="separator:a9c3b0dc39ec07fa1205d6f23e267b15c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeeeb6294571e109d6fc5506d29e3d7b9"><td class="memItemLeft" align="right" valign="top"><a id="aeeeb6294571e109d6fc5506d29e3d7b9" name="aeeeb6294571e109d6fc5506d29e3d7b9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updateGUI</b> ()</td></tr>
+<tr class="memitem:aeeeb6294571e109d6fc5506d29e3d7b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aeeeb6294571e109d6fc5506d29e3d7b9">updateGUI</a> ()</td></tr>
 <tr class="separator:aeeeb6294571e109d6fc5506d29e3d7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2d187971dc6ce01ccccca7982bb8a11"><td class="memItemLeft" align="right" valign="top"><a id="aa2d187971dc6ce01ccccca7982bb8a11" name="aa2d187971dc6ce01ccccca7982bb8a11"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updateUniverse</b> ()</td></tr>
-<tr class="separator:aa2d187971dc6ce01ccccca7982bb8a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0669ee18528596a2585bb818c430248d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a0669ee18528596a2585bb818c430248d">updateCollision</a> ()</td></tr>
 <tr class="separator:a0669ee18528596a2585bb818c430248d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa220e79da2bd3555699f839eb94a1688"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aa220e79da2bd3555699f839eb94a1688">updateBullets</a> ()</td></tr>
@@ -106,8 +102,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>updateUniverse</b> ()
 <tr class="memitem:a79df6376b332d63c9eca0dcee30305c3"><td class="memItemLeft" align="right" valign="top"><a id="a79df6376b332d63c9eca0dcee30305c3" name="a79df6376b332d63c9eca0dcee30305c3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
 <tr class="separator:a79df6376b332d63c9eca0dcee30305c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af976e79ad223aa0f6c0131a573d04690"><td class="memItemLeft" align="right" valign="top"><a id="af976e79ad223aa0f6c0131a573d04690" name="af976e79ad223aa0f6c0131a573d04690"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>renderGUI</b> ()</td></tr>
+<tr class="memitem:af976e79ad223aa0f6c0131a573d04690"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#af976e79ad223aa0f6c0131a573d04690">renderGUI</a> ()</td></tr>
 <tr class="separator:af976e79ad223aa0f6c0131a573d04690"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46089dbfd6db310f6e499a3ec1e48371"><td class="memItemLeft" align="right" valign="top"><a id="a46089dbfd6db310f6e499a3ec1e48371" name="a46089dbfd6db310f6e499a3ec1e48371"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>renderUniverse</b> ()</td></tr>
@@ -183,6 +178,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>renderUniverse</b> ()
 <p >Draw universe</p>
 <p >Drawing everything here</p>
 <p >Render the player inside the window</p>
+<p >Rendering game over screen here</p>
+
+</div>
+</div>
+<a id="af976e79ad223aa0f6c0131a573d04690" name="af976e79ad223aa0f6c0131a573d04690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af976e79ad223aa0f6c0131a573d04690">&#9670;&#160;</a></span>renderGUI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::renderGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >The order of rendering is extremely important!</p>
 
 </div>
 </div>
@@ -200,7 +214,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>renderUniverse</b> ()
         </tr>
       </table>
 </div><div class="memdoc">
-<p ><a class="el" href="class_game.html">Game</a> public functions</p>
+<p ><a class="el" href="class_game.html">Game</a> public functions GUIs, universe, collisions, bullets, enemies and etc get updated here</p>
 <p ><a class="el" href="class_game.html">Game</a> functions implementation </p>
 
 </div>
@@ -265,6 +279,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>renderUniverse</b> ()
 <p >Managing enemies when going toward bottom of the screen</p>
 <p >Delete enemy from memory and erase them as well.</p>
 <p >If enemy collides with player then it (enemy) still will be erased</p>
+
+</div>
+</div>
+<a id="aeeeb6294571e109d6fc5506d29e3d7b9" name="aeeeb6294571e109d6fc5506d29e3d7b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeeeb6294571e109d6fc5506d29e3d7b9">&#9670;&#160;</a></span>updateGUI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::updateGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Here we update player's GUI At healthPointPercent, we get the percentage of health point</p>
 
 </div>
 </div>

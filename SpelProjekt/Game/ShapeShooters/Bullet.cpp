@@ -1,7 +1,3 @@
-//
-// Created by Ismail Safwat on 2022-12-02.
-//
-
 #include "Bullet.h"
 /**
  * Bullet constructor

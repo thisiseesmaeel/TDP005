@@ -1,7 +1,3 @@
-//
-// Created by Ismail Safwat on 2022-12-02.
-//
-
 #ifndef BULLET_H
 #define BULLET_H
 
@@ -10,14 +6,13 @@
 
 class Bullet {
 private:
+    /**
+     * Private members of Bullet including shape, direction and movement velocity
+     */
     sf::Sprite shape;
 
     sf::Vector2f direction;
     float movementVelocity{};
-
-    /**
-     * Bullet private functions
-     */
 
 public:
     /**
@@ -35,11 +30,12 @@ public:
 
     /**
      * Bullet accessors
+     * getBounds() determines the boundaries of the bullet
      */
     sf::FloatRect getBounds() const;
 
     /**
-     * Bullet public functions
+     * Bullet public functions including update and render
      */
     void update();
     void render(sf::RenderTarget* target);

@@ -1,7 +1,3 @@
-//
-// Created by Ismail Safwat on 2022-11-25.
-//
-
 #include "Game.h"
 /**
  * Game Constructor
@@ -68,7 +64,7 @@ void Game::initializeGUI() {
      * Fonts are loaded here
      */
     if(!this->font.loadFromFile("../Fonts/Nasa21-l23X.ttf")){
-        std::cout << "Font can not be loaded!" << std::endl;
+        std::cout << "Font failed to load!" << std::endl;
     }
     /**
      * Initializing Point texts here
@@ -99,7 +95,7 @@ void Game::initializeGUI() {
 }
 
 void Game::initializeUniverse() {
-    if(!this->universeBackgroundTexture.loadFromFile("../Textures/background.jpeg")){
+    if(!this->universeBackgroundTexture.loadFromFile("../Textures/background2.jpg")){
         std::cout << "World background texture fails to load!" << std::endl;
     }
     this->universeBackground.setTexture(this->universeBackgroundTexture);
@@ -193,14 +189,11 @@ void Game::updateGUI() {
      * Here we update player's GUI
      * At healthPointPercent, we get the percentage of health point
      */
-    float healthPointPercent =static_cast<float>(this->player->getHealthPoint()) / this->player->getHealthPointMax();
+    float healthPointPercent = static_cast<float>(this->player->getHealthPoint()) / this->player->getHealthPointMax();
     this->playerHealthPointBar.setSize(sf::Vector2f(300.f * healthPointPercent, this->playerHealthPointBar.getSize().y));
 
 }
 
-void Game::updateUniverse() {
-
-}
 
 void Game::updateCollision() {
     /**
@@ -240,6 +233,7 @@ void Game::updateBullets() {
             /// Delete bullet from memory and erase them as well.
             delete this->bullets.at(counter);
             this->bullets.erase(this->bullets.begin() + counter);
+            --counter;
         }
 
         ++counter;
@@ -330,8 +324,6 @@ void Game::update() {
     this->updateEnemies();
     this->updateWar();
     this->updateGUI();
-    this->updateUniverse();
-
 }
 
 void Game::renderGUI() {

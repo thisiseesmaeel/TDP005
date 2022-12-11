@@ -1,7 +1,3 @@
-//
-// Created by Ismail Safwat on 2022-11-25.
-//
-
 #include "Player.h"
 
 /**
@@ -70,17 +66,17 @@ const int &Player::getHealthPointMax() const {
 /**
  * Player modifier implementation
  */
-void Player::setPosition(const sf::Vector2f position) {
+/*void Player::setPosition(const sf::Vector2f position) {
     this->sprite.setPosition(position);
-}
+}*/
 
 void Player::setPosition(const float x, const float y) {
     this->sprite.setPosition(x, y);
 }
 
-void Player::setHealthPoint(const int hp) {
+/*void Player::setHealthPoint(const int hp) {
     this->healthPoint = hp;
-}
+}*/
 
 void Player::reduceHealthPoint(const int value) {
     this->healthPoint -= value;

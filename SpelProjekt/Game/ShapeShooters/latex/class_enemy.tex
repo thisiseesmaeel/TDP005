@@ -12,6 +12,9 @@ sf\+::\+Float\+Rect \mbox{\hyperlink{class_enemy_affee7ceddf6f48bdbd1504d8a60d3d
 \mbox{\Hypertarget{class_enemy_a66a6917bbd189aecee906505cf9d9d32}\label{class_enemy_a66a6917bbd189aecee906505cf9d9d32}} 
 const int \& {\bfseries get\+Points} () const
 \item 
+\mbox{\Hypertarget{class_enemy_a99473261dd2ec3dbdab627046c326d3a}\label{class_enemy_a99473261dd2ec3dbdab627046c326d3a}} 
+const int \& {\bfseries get\+Damage} () const
+\item 
 void \mbox{\hyperlink{class_enemy_ad55ee71b5a8c23fbd00b3c368b90cc64}{update}} ()
 \item 
 \mbox{\Hypertarget{class_enemy_a0ecd38d13613eec89063155b71575463}\label{class_enemy_a0ecd38d13613eec89063155b71575463}} 
@@ -30,7 +33,7 @@ void {\bfseries render} (sf\+::\+Render\+Target $\ast$target)
 \index{Enemy@{Enemy}!````~Enemy@{$\sim$Enemy}}
 \index{````~Enemy@{$\sim$Enemy}!Enemy@{Enemy}}
 \doxysubsubsection{\texorpdfstring{$\sim$Enemy()}{~Enemy()}}
-{\footnotesize\ttfamily Enemy\+::$\sim$\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily Enemy\+::$\sim$\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
 
 \mbox{\hyperlink{class_enemy}{Enemy}} destructor 
 
@@ -46,6 +49,8 @@ void {\bfseries render} (sf\+::\+Render\+Target $\ast$target)
 \index{update@{update}!Enemy@{Enemy}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily void Enemy\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_enemy}{Enemy}} public functions Like \mbox{\hyperlink{class_player}{Player}}, enemy is needed to get updated and rendered which is defined here via \mbox{\hyperlink{class_enemy_ad55ee71b5a8c23fbd00b3c368b90cc64}{update()}} and render() respectively.
 
 \mbox{\hyperlink{class_enemy}{Enemy}} public functions 
 

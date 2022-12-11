@@ -1,7 +1,3 @@
-//
-// Created by Ismail Safwat on 2022-12-03.
-//
-
 #include "Enemy.h"
 
 /**
@@ -9,9 +5,11 @@
  */
 
 void Enemy::initializeVariables() {
+    /**
+     * Almost all variables are determined by pointCount for randomness sake.
+     */
     this->pointCount = rand() %10 + 2; // with a minimum of 2 and maximum of 11
     this->speed = static_cast<float>(this->pointCount/2);
-    this->type = 0;
     this->healthPointMax = static_cast<int>(this->pointCount);
     this->healthPoint = this->healthPointMax;
     this->damage = this->pointCount;
@@ -19,7 +17,7 @@ void Enemy::initializeVariables() {
 }
 
 void Enemy::initializeShape() {
-    this->shape.setRadius(this->pointCount * 4);
+    this->shape.setRadius(static_cast<float>(this->pointCount * 4));
     this->shape.setPointCount(this->pointCount);
     this->shape.setFillColor(sf::Color(rand()%255 + 1, rand()%255 + 1, rand()%255 + 1, 255));
 }
@@ -37,9 +35,7 @@ Enemy::Enemy(float positionX, float positionY) {
 /**
  * Enemy destructor
  */
-Enemy::~Enemy() {
-
-}
+Enemy::~Enemy() = default;
 
 
 sf::FloatRect Enemy::getBounds() const {
