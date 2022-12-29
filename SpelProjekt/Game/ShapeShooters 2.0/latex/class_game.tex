@@ -1,0 +1,173 @@
+\hypertarget{class_game}{}\doxysection{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\item 
+virtual \mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{$\sim$\+Game}} ()
+\item 
+void \mbox{\hyperlink{class_game_a1ab78f5ed0d5ea879157357cf2fb2afa}{run}} ()
+\item 
+void \mbox{\hyperlink{class_game_adef398a1e909cbc6882977e4c978b57e}{update\+Poll\+Events}} ()
+\item 
+void \mbox{\hyperlink{class_game_a9c3b0dc39ec07fa1205d6f23e267b15c}{update\+Input}} ()
+\item 
+void \mbox{\hyperlink{class_game_aeeeb6294571e109d6fc5506d29e3d7b9}{update\+GUI}} ()
+\item 
+void \mbox{\hyperlink{class_game_a0669ee18528596a2585bb818c430248d}{update\+Collision}} ()
+\item 
+void \mbox{\hyperlink{class_game_aa220e79da2bd3555699f839eb94a1688}{update\+Bullets}} ()
+\item 
+void \mbox{\hyperlink{class_game_a0634553da4f33ed2c5a6f2cae6607ea5}{update\+Enemies}} ()
+\item 
+void \mbox{\hyperlink{class_game_a4641c305c7b2606e923c0f340d812b37}{update\+War}} ()
+\item 
+\mbox{\Hypertarget{class_game_a79df6376b332d63c9eca0dcee30305c3}\label{class_game_a79df6376b332d63c9eca0dcee30305c3}} 
+void {\bfseries update} ()
+\item 
+void \mbox{\hyperlink{class_game_af976e79ad223aa0f6c0131a573d04690}{render\+GUI}} ()
+\item 
+\mbox{\Hypertarget{class_game_a46089dbfd6db310f6e499a3ec1e48371}\label{class_game_a46089dbfd6db310f6e499a3ec1e48371}} 
+void {\bfseries render\+Universe} ()
+\item 
+void \mbox{\hyperlink{class_game_a15ddd769261d923827a3cdf41499c843}{render}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\label{class_game_ad59df6562a58a614fda24622d3715b65}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_game}{Game}} constructor
+
+\mbox{\hyperlink{class_game}{Game}} Constructor \mbox{\Hypertarget{class_game_ae3d112ca6e0e55150d2fdbc704474530}\label{class_game_ae3d112ca6e0e55150d2fdbc704474530}} 
+\index{Game@{Game}!````~Game@{$\sim$Game}}
+\index{````~Game@{$\sim$Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{$\sim$Game()}{~Game()}}
+{\footnotesize\ttfamily Game\+::$\sim$\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\hyperlink{class_game}{Game}} destructor
+
+\mbox{\hyperlink{class_game}{Game}} Destructor To avoid memory leaks after the game ends Delete textures
+
+Delete bullets
+
+Delete enemies
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_a15ddd769261d923827a3cdf41499c843}\label{class_game_a15ddd769261d923827a3cdf41499c843}} 
+\index{Game@{Game}!render@{render}}
+\index{render@{render}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Game\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Draw universe
+
+Drawing everything here
+
+Render the player inside the window
+
+Rendering game over screen here\mbox{\Hypertarget{class_game_af976e79ad223aa0f6c0131a573d04690}\label{class_game_af976e79ad223aa0f6c0131a573d04690}} 
+\index{Game@{Game}!renderGUI@{renderGUI}}
+\index{renderGUI@{renderGUI}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{renderGUI()}{renderGUI()}}
+{\footnotesize\ttfamily void Game\+::render\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The order of rendering is extremely important!\mbox{\Hypertarget{class_game_a1ab78f5ed0d5ea879157357cf2fb2afa}\label{class_game_a1ab78f5ed0d5ea879157357cf2fb2afa}} 
+\index{Game@{Game}!run@{run}}
+\index{run@{run}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Game\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_game}{Game}} public functions GUIs, universe, collisions, bullets, enemies and etc get updated here
+
+\mbox{\hyperlink{class_game}{Game}} functions implementation \mbox{\Hypertarget{class_game_aa220e79da2bd3555699f839eb94a1688}\label{class_game_aa220e79da2bd3555699f839eb94a1688}} 
+\index{Game@{Game}!updateBullets@{updateBullets}}
+\index{updateBullets@{updateBullets}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{updateBullets()}{updateBullets()}}
+{\footnotesize\ttfamily void Game\+::update\+Bullets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Managing bullets when going toward top of the screen
+
+Delete bullet from memory and erase them as well.\mbox{\Hypertarget{class_game_a0669ee18528596a2585bb818c430248d}\label{class_game_a0669ee18528596a2585bb818c430248d}} 
+\index{Game@{Game}!updateCollision@{updateCollision}}
+\index{updateCollision@{updateCollision}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{updateCollision()}{updateCollision()}}
+{\footnotesize\ttfamily void Game\+::update\+Collision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+When player collides with the corners of the screen.
+
+Left corner of the screen
+
+Right corner of the screen
+
+Top corner of the screen
+
+Bottom corner of the screen\mbox{\Hypertarget{class_game_a0634553da4f33ed2c5a6f2cae6607ea5}\label{class_game_a0634553da4f33ed2c5a6f2cae6607ea5}} 
+\index{Game@{Game}!updateEnemies@{updateEnemies}}
+\index{updateEnemies@{updateEnemies}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{updateEnemies()}{updateEnemies()}}
+{\footnotesize\ttfamily void Game\+::update\+Enemies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Enemies spawn here
+
+Updating enemies here
+
+Managing enemies when going toward bottom of the screen
+
+Delete enemy from memory and erase them as well.
+
+If enemy collides with player then it (enemy) still will be erased\mbox{\Hypertarget{class_game_aeeeb6294571e109d6fc5506d29e3d7b9}\label{class_game_aeeeb6294571e109d6fc5506d29e3d7b9}} 
+\index{Game@{Game}!updateGUI@{updateGUI}}
+\index{updateGUI@{updateGUI}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{updateGUI()}{updateGUI()}}
+{\footnotesize\ttfamily void Game\+::update\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here we update player\textquotesingle{}s GUI At health\+Point\+Percent, we get the percentage of health point\mbox{\Hypertarget{class_game_a9c3b0dc39ec07fa1205d6f23e267b15c}\label{class_game_a9c3b0dc39ec07fa1205d6f23e267b15c}} 
+\index{Game@{Game}!updateInput@{updateInput}}
+\index{updateInput@{updateInput}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{updateInput()}{updatePlayer()}}
+{\footnotesize\ttfamily void Game\+::update\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Move \mbox{\hyperlink{class_player}{Player}}
+
+MOVE TO THE LEFT
+
+MOVE TO THE RIGHT
+
+MOVE FORWARD
+
+MOVE BACKWARD
+
+When left button of mouse is pressed and player can attack\mbox{\Hypertarget{class_game_adef398a1e909cbc6882977e4c978b57e}\label{class_game_adef398a1e909cbc6882977e4c978b57e}} 
+\index{Game@{Game}!updatePollEvents@{updatePollEvents}}
+\index{updatePollEvents@{updatePollEvents}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{updatePollEvents()}{updatePollEvents()}}
+{\footnotesize\ttfamily void Game\+::update\+Poll\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Two different ways to close the window\+:
+\begin{DoxyEnumerate}
+\item by pressing the close button
+\item by pressing the Esc button on the keyboard
+\end{DoxyEnumerate}\mbox{\Hypertarget{class_game_a4641c305c7b2606e923c0f340d812b37}\label{class_game_a4641c305c7b2606e923c0f340d812b37}} 
+\index{Game@{Game}!updateWar@{updateWar}}
+\index{updateWar@{updateWar}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{updateWar()}{updateWar()}}
+{\footnotesize\ttfamily void Game\+::update\+War (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check the collision between enemy and bullet
+
+Getting points when bullet collides with enemy
+
+Delete and erase enemy after collision
+
+Delete and erase bullet after collision
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game.\+h\item 
+Game.\+cpp\end{DoxyCompactItemize}

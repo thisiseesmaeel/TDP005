@@ -1,0 +1,53 @@
+\hypertarget{_player_8h_source}{}\doxysection{Player.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PLAYER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PLAYER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include<SFML/Graphics.hpp>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include<iostream>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_player}{Player}} \{}
+\DoxyCodeLine{8 \textcolor{keyword}{private}:}
+\DoxyCodeLine{12     sf::Sprite sprite;}
+\DoxyCodeLine{13     sf::Texture texture;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keywordtype}{float} movementVelocity\{\};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keywordtype}{float} attackControl\{\};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{float} attackControlMax\{\};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} healthPoint;}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} healthPointMax;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} initializeVariables();}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} initializeTexture();}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} initializeSprite();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keyword}{public}:}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{40     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{\string~Player}}();}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{46     \textcolor{keyword}{const} sf::Vector2f\& \mbox{\hyperlink{class_player_a49300f6f7d1083b3fddca1c270cce16b}{getPos}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{47     sf::FloatRect getBounds() \textcolor{keyword}{const};}
+\DoxyCodeLine{48     \textcolor{keyword}{const} \textcolor{keywordtype}{int}\& getHealthPoint() \textcolor{keyword}{const};}
+\DoxyCodeLine{49     \textcolor{keyword}{const} \textcolor{keywordtype}{int}\& getHealthPointMax() \textcolor{keyword}{const};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{56     \textcolor{comment}{//void setPosition(sf::Vector2f position);}}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_ab10afb06446c6e090f7b372fc0b1b5d0}{setPosition}}(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y);}
+\DoxyCodeLine{58     \textcolor{comment}{//void setHealthPoint(const int hp);}}
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} reduceHealthPoint(\textcolor{keyword}{const} \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_af12205f402350d43ed3d171a0cf133aa}{move}}(\textcolor{keywordtype}{float} coordinateX, \textcolor{keywordtype}{float} coordinateY);}
+\DoxyCodeLine{66     \textcolor{keywordtype}{bool} canAttack();}
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} updateAttack();}
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} update();}
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} render(sf::RenderTarget\& target);}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#endif }}
+
+\end{DoxyCode}

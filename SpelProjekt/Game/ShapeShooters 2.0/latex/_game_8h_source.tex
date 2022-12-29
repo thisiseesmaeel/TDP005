@@ -1,0 +1,73 @@
+\hypertarget{_game_8h_source}{}\doxysection{Game.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef GAME\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define GAME\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Player.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Bullet.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Enemy.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include<map>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include<string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include<sstream>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_game}{Game}} \{}
+\DoxyCodeLine{13 \textcolor{keyword}{private}:}
+\DoxyCodeLine{17     sf::RenderWindow* window\{\};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{24     std::map<std::string, sf::Texture*> textures;}
+\DoxyCodeLine{25     std::vector<Bullet*> bullets;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30     sf::Font font;}
+\DoxyCodeLine{31     sf::Text pointText;}
+\DoxyCodeLine{32     sf::Text gameOverText;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{37     sf::Texture universeBackgroundTexture;}
+\DoxyCodeLine{38     sf::Sprite universeBackground;}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{43      \textcolor{keywordtype}{unsigned} points;}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{48     \mbox{\hyperlink{class_player}{Player}}* player\{\};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{53      sf::RectangleShape playerHealthPointBar;}
+\DoxyCodeLine{54      sf::RectangleShape playerHealthPointBarBackground;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{float} spawnTimer\{\};}
+\DoxyCodeLine{60     \textcolor{keywordtype}{float} spawnTimerMax\{\};}
+\DoxyCodeLine{61     std::vector<Enemy*> enemies;}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} initializeWindow();}
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} initializeTextures();}
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} initializeGUI();}
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} initializeUniverse();}
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} initializeSystems();}
+\DoxyCodeLine{73     \textcolor{keywordtype}{void} initializePlayer();}
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} initializeEnemy();}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{keyword}{public}:}
+\DoxyCodeLine{80     \mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}}();}
+\DoxyCodeLine{84     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{\string~Game}}();}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 }
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_a1ab78f5ed0d5ea879157357cf2fb2afa}{run}}();}
+\DoxyCodeLine{93     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_adef398a1e909cbc6882977e4c978b57e}{updatePollEvents}}();}
+\DoxyCodeLine{94     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_a9c3b0dc39ec07fa1205d6f23e267b15c}{updatePlayer}}();}
+\DoxyCodeLine{95     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_aeeeb6294571e109d6fc5506d29e3d7b9}{updateGUI}}();}
+\DoxyCodeLine{96     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_a0669ee18528596a2585bb818c430248d}{updateCollision}}();}
+\DoxyCodeLine{97     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_aa220e79da2bd3555699f839eb94a1688}{updateBullets}}();}
+\DoxyCodeLine{98     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_a0634553da4f33ed2c5a6f2cae6607ea5}{updateEnemies}}();}
+\DoxyCodeLine{99     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_a4641c305c7b2606e923c0f340d812b37}{updateWar}}();}
+\DoxyCodeLine{100     \textcolor{keywordtype}{void} update();}
+\DoxyCodeLine{101     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_af976e79ad223aa0f6c0131a573d04690}{renderGUI}}();}
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} renderUniverse();}
+\DoxyCodeLine{103     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_a15ddd769261d923827a3cdf41499c843}{render}}();}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \};}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#endif }}
+
+\end{DoxyCode}

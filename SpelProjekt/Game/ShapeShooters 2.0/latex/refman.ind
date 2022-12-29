@@ -1,0 +1,97 @@
+\begin{theindex}
+
+  \item {$\sim$Bullet}
+    \subitem {Bullet}, \hyperpage{5}
+  \item {$\sim$Enemy}
+    \subitem {Enemy}, \hyperpage{7}
+  \item {$\sim$Game}
+    \subitem {Game}, \hyperpage{8}
+  \item {$\sim$Player}
+    \subitem {Player}, \hyperpage{11}
+
+  \indexspace
+
+  \item {Bullet}, \hyperpage{5}
+    \subitem {$\sim$Bullet}, \hyperpage{5}
+    \subitem {Bullet}, \hyperpage{5}
+    \subitem {getBounds}, \hyperpage{6}
+    \subitem {update}, \hyperpage{6}
+
+  \indexspace
+
+  \item {Enemy}, \hyperpage{6}
+    \subitem {$\sim$Enemy}, \hyperpage{7}
+    \subitem {Enemy}, \hyperpage{6}
+    \subitem {getBounds}, \hyperpage{7}
+    \subitem {update}, \hyperpage{7}
+
+  \indexspace
+
+  \item {Game}, \hyperpage{7}
+    \subitem {$\sim$Game}, \hyperpage{8}
+    \subitem {Game}, \hyperpage{8}
+    \subitem {render}, \hyperpage{8}
+    \subitem {renderGUI}, \hyperpage{8}
+    \subitem {run}, \hyperpage{8}
+    \subitem {updateBullets}, \hyperpage{9}
+    \subitem {updateCollision}, \hyperpage{9}
+    \subitem {updateEnemies}, \hyperpage{9}
+    \subitem {updateGUI}, \hyperpage{9}
+    \subitem {updateInput}, \hyperpage{9}
+    \subitem {updatePollEvents}, \hyperpage{10}
+    \subitem {updateWar}, \hyperpage{10}
+  \item {getBounds}
+    \subitem {Bullet}, \hyperpage{6}
+    \subitem {Enemy}, \hyperpage{7}
+  \item {getPos}
+    \subitem {Player}, \hyperpage{11}
+
+  \indexspace
+
+  \item {move}
+    \subitem {Player}, \hyperpage{11}
+
+  \indexspace
+
+  \item {Player}, \hyperpage{11}
+    \subitem {$\sim$Player}, \hyperpage{11}
+    \subitem {getPos}, \hyperpage{11}
+    \subitem {move}, \hyperpage{11}
+    \subitem {Player}, \hyperpage{11}
+    \subitem {setPosition}, \hyperpage{12}
+
+  \indexspace
+
+  \item {render}
+    \subitem {Game}, \hyperpage{8}
+  \item {renderGUI}
+    \subitem {Game}, \hyperpage{8}
+  \item {run}
+    \subitem {Game}, \hyperpage{8}
+
+  \indexspace
+
+  \item {setPosition}
+    \subitem {Player}, \hyperpage{12}
+
+  \indexspace
+
+  \item {update}
+    \subitem {Bullet}, \hyperpage{6}
+    \subitem {Enemy}, \hyperpage{7}
+  \item {updateBullets}
+    \subitem {Game}, \hyperpage{9}
+  \item {updateCollision}
+    \subitem {Game}, \hyperpage{9}
+  \item {updateEnemies}
+    \subitem {Game}, \hyperpage{9}
+  \item {updateGUI}
+    \subitem {Game}, \hyperpage{9}
+  \item {updatePlayer}
+    \subitem {Game}, \hyperpage{9}
+  \item {updatePollEvents}
+    \subitem {Game}, \hyperpage{10}
+  \item {updateWar}
+    \subitem {Game}, \hyperpage{10}
+
+\end{theindex}
