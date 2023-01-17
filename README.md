@@ -1,18 +1,24 @@
-# TDP005
+# TDP005 - Project: Object Oriented System
 
+The course is the second project course for education in innovative programming. In this course, students are still working in pairs, this time to build a game in C++. The course is running parallel to the course in object-oriented programming, where students are learning C++.
 
+The course includes four consecutive moments:
+
+Introduction to software development methods (software engineering)
+SFML (Simple and Fast Multimedia Library) for developing GUI:s in C++
+UML (Unified Markup Language) for object-oriented design
+Project work in C++
+The emphasis in the course lies on the project.
 
 ## Shape Shooters
 
-Det här är repo till Spelkursen TDP005 som gjordes i Linköpingsuniversitet under höstterminen 2022.
-
-## Kompilering och körning av spelet 
- - Det går att klona spelet genom att köra följande kommando:
+## Compiling and running the game
+ - To clone the game run the following command:
 	
-     `git clone git@gitlab.liu.se:saysa289/tdp005.git`
+     `git clone git@github.com:thisiseesmaeel/TDP005.git`
     
- - För att kompilera spelet gå i SpelProjekt/Game/ShapeShooters/ och kör följande kommando:
+ - To compile the game go to SpelProjekt/Game/ShapeShooters/ and run the following command:
 	      `make` 
 	 
-- För att köra spelet kör följande kommando i samma katalog:
+- To run the game run the following command in the same directory:
 		`./ShapeShooters`
